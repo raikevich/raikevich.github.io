@@ -73,7 +73,7 @@ $(document).ready(function() {
 
     $(window).on("load resize scroll", function(){
         if (window.innerWidth>767) {
-            if ($(window).scrollTop() > window.innerHeight) {
+            if ($(window).scrollTop() > window.innerHeight/2) {
                 $('.click_top').addClass('active');
             } else {
                 $('.click_top').removeClass('active');

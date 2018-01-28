@@ -95,6 +95,9 @@ h1, h2, h3, h4, h5, h6 {
     opacity: .5;
     transition:  all .3s;
 }
+.hover_grad {
+    background: linear-gradient(to bottom, rgba(46,139,87,0) 0%, rgba(46,139,87,0.5) 20%, rgba(46,139,87,1) 100%);
+}
 .header__logo {
     max-width:  390px;
 }
@@ -262,13 +265,21 @@ section {
     height:  100%;
     width:  100%;
 }
-.service__wrap {
-    padding-bottom: 60%;
+.p_wrap {
     position:  relative;
     overflow: hidden;
     margin-bottom: 6px;
 }
-.service__wrap img {
+.service__wrap {
+    padding-bottom: 60%;
+}
+.clients__wrap_100 {
+    padding-bottom: 100%;
+}
+.clients__wrap_50 {
+    padding-bottom: 50%;
+}
+.p_wrap img {
     position:  absolute;
     top: 50%;
     left:  50%;
@@ -276,7 +287,10 @@ section {
     min-width: 100%;
     min-height:  100%;
 }
-
+.how_wrap {
+    padding-bottom: 50%;
+    margin-top: 50px;
+}
 .service__content {
     position:  absolute;
     color:  #fff;
@@ -285,7 +299,9 @@ section {
     bottom: 0;
     width: calc(100% - 143px);
 }
-
+.clients__content {
+    width: 100%;
+}
 .hover_link {
     position: absolute;
     bottom:  60px;
@@ -314,11 +330,11 @@ section {
     height:  3px;
     background: #fff;
 }
-.service__wrap:hover .hover_img {
+.p_wrap:hover .hover_img {
     opacity: 0;
 }
 
-.service__wrap:hover .hover_link {
+.p_wrap:hover .hover_link {
     transform: translateX(0px);
 }
 .sensor .hover_link {
@@ -508,6 +524,168 @@ h3 {
     color: #ffffff;
     box-shadow: none;
 }
+.contacts__wrap {
+    background: #3cb371;
+    color: #fff;
+    display: flex;
+    height: 100%;
+}
+
+.contacts__wrap a {
+    color: #fff;
+}
+
+.contacts__content {
+    margin: auto;
+    padding: 50px;
+    width: 100%;
+}
+
+
+.cont_cont {
+    font-size: 25px;
+    line-height: unset;
+}
+
+.cont_note {
+    font-size: 12px;
+    line-height: unset;
+}
+.map {
+    position: relative;
+    overflow: hidden;
+}
+
+.shildik {
+    position: absolute;
+    background: #fff;
+    padding: 50px;
+    z-index: 90;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    width: 420px;
+}
+.map ymaps {
+    filter: grayscale(100%);
+}
+.how_wrap img {
+    min-height: inherit;
+    min-width: inherit;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.how__number {
+    position: absolute;
+    color: #fff;
+    background: #4ab471;
+    font-size: 23px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+}
+
+.how_work h3 {
+    text-align: center;
+}
+.sfera_wrap {
+    background: #fff;
+    padding-bottom: 70%;
+    border-radius: 50%;
+    width: 70%;
+    margin: 20px auto;
+}
+.sfera_wrap img{
+    min-height: inherit;
+    min-width: inherit;
+    max-height: 60%;
+    max-width: 60%;
+}
+.client_logo {
+    margin: 50px 0;
+    text-align: center;
+}
+.client_logo img {
+    height: auto;
+    max-width: 300px;
+}
+.client_img {
+    position: relative;
+    padding-bottom: 70%;
+    margin-top: 6px;
+    overflow: hidden;
+}
+.client_img img {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+.news__list>[class*='col']{
+    margin-bottom: 20px;
+}
+.page-link {
+    color: #4ab471;
+}
+
+.page-link:hover {
+    color: #000;
+    background: transparent;
+}
+.page-item.active .page-link {
+    background: #4ab471;
+    border-color: #4ab471;
+}
+.news__header_date {
+    font-size: 14px;
+    font-weight: 400;
+}
+.section__share {
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section__share p {
+    margin-bottom: 0;
+}
+.section__share i {
+    font-size: 20px;
+    margin: 0 3px;
+}
+.about_page__img {
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+.chief__header {
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.chief__social i {
+    font-size: 25px;
+    margin-right: 15px;
+}
+.chief__img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chief__img img {
+    max-width: 100%;
+}
+
+.chief__social {
+    margin-bottom: 20px;
+}
+
 
 
 
@@ -581,6 +759,10 @@ h3 {
         font-size:  16px;
         line-height: 20px;
     }
+    .contacts__wrap {
+        height: initial;
+        margin-bottom: 6px;
+    }
 }
 
 @media (max-width:767px) {
@@ -633,6 +815,13 @@ h3 {
     .hover_link {
         bottom:  15px;
         right: 15px;
+    }
+    .shildik {
+        position: relative;
+        top: 0;
+        transform: none;
+        width: 100%;
+        left: 0;
     }
 }
 
