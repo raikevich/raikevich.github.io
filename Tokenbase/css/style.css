@@ -66,6 +66,15 @@ h1, h2, h3, h4, h5, h6 {
 .enter:hover:after {
     background-image: url('../img/enter_h.svg');
 }
+.enter.login {
+    display: none;
+}
+.profile.login {
+    display: inline-block;
+}
+.profile {
+    display: none;
+}
 .button {
     background: transparent;
     border: none;
@@ -91,7 +100,8 @@ h1, h2, h3, h4, h5, h6 {
 }.lang:hover, .search:hover {
      color: #00b46c;
  }
-.lang:after {
+.lang:after,
+.profile__name:after {
     content: '';
     position: absolute;
     top: 0;
@@ -102,8 +112,22 @@ h1, h2, h3, h4, h5, h6 {
     background-size:8px 5px;
     transition: all .3s;
 }
-.lang:hover:after {
+.lang:hover:after,
+.profile__name:hover:after{
     background-image: url('../img/arrow_down_h.svg');
+}
+.profile__name:after {
+    left: auto;
+    right:0;
+}
+.profile__name {
+    padding-right: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+}
+.profile__name:hover {
+    color: #00b46c;
 }
 .lang_mod {
     position: absolute;
@@ -113,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 100%;
     right: 0;
     display: none;
+    z-index: 10;
 }
 .search_mod {
     position: absolute;
@@ -120,6 +145,21 @@ h1, h2, h3, h4, h5, h6 {
     right: 15px;
     width: 300px;
     display: none;
+    z-index: 10;
+}
+.profile_mod {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+    padding: 5px 15px;
+    top: 100%;
+    right: 15px;
+    z-index: 10;
+    display: none;
+}
+.profile_mod a {
+    display: block;
+    margin-bottom: 5px;
 }
 
 .search_mod input {
@@ -149,7 +189,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header__enter {
-    margin: 10px 0;
 }
 header {
     padding: 30px 0;
