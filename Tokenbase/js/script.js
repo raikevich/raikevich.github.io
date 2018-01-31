@@ -44,4 +44,9 @@ $(document).ready(function() {
             $('.search_mod').slideToggle(300);
         });
     }
+    if ($('.profile__name').length) {
+        $('.profile__name').on('click', function() {
+            $('.profile_mod').slideToggle(300);
+        });
+    }
 });
