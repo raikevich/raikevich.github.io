@@ -79,16 +79,18 @@ h1, h2, h3, h4, h5, h6 {
 .search {
     margin: 0 50px;
     display: inline-block;
-    position: relative;
     cursor: pointer;
+    transition: all .3s;
 }
 .lang {
     padding-left: 20px;
     position: relative;
     display: inline-block;
-    position: relative;
     cursor: pointer;
-}
+    transition: all .3s;
+}.lang:hover, .search:hover {
+     color: #00b46c;
+ }
 .lang:after {
     content: '';
     position: absolute;
@@ -111,6 +113,29 @@ h1, h2, h3, h4, h5, h6 {
     top: 100%;
     right: 0;
     display: none;
+}
+.search_mod {
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    width: 300px;
+    display: none;
+}
+
+.search_mod input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.search_mod button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    cursor: pointer;
+    background: #e5e5e5;
 }
 .header__menu .nav li+li {
     margin-left: 50px;

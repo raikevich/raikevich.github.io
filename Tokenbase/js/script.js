@@ -39,4 +39,9 @@ $(document).ready(function() {
             $('.lang_mod').slideToggle(300);
         });
     }
+    if ($('.search').length) {
+        $('.search').on('click', function() {
+            $('.search_mod').slideToggle(300);
+        });
+    }
 });
