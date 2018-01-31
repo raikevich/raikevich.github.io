@@ -496,6 +496,9 @@ footer .nav li+li {
 .soc-yt:hover {
     background-image: url('../img/yt_h.svg');
 }
+.preload {
+    display: none;
+}
 
 
 
