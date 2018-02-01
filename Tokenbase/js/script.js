@@ -23,17 +23,6 @@ $(document).ready(function() {
 
     var wp = window.innerWidth - document.documentElement.clientWidth;
 
-    if ($('.nav__click').length) {
-        $('.nav__click').on('click', function() {
-            $('.nav').addClass('active');
-            $('body').addClass('o-hidden').css('margin-right', wp + 'px');
-        });
-        $('.nav .fa-close').on('click', function() {
-            $('.nav').removeClass('active');
-            $('body').removeClass('o-hidden').css('margin-right','0px');
-        });
-    }
-
     if ($('.lang').length) {
         $('.lang').on('click', function() {
             $('.lang_mod').slideToggle(300);
@@ -47,6 +36,13 @@ $(document).ready(function() {
     if ($('.profile__name').length) {
         $('.profile__name').on('click', function() {
             $('.profile_mod').slideToggle(300);
+        });
+    }
+
+    if ($('.add_comm i').length) {
+        $('.add_comm i').on('click', function() {
+            $(this).prevAll('input').prop('checked',true);
+            $(this).nextAll('input').prop('checked',false);
         });
     }
 });
