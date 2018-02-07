@@ -333,8 +333,7 @@ section {
     min-height:  100%;
 }
 .how_wrap {
-    padding-bottom: 50%;
-    margin-top: 50px;
+    padding-bottom: 100%;
 }
 .service__content {
     position:  absolute;
@@ -641,12 +640,15 @@ h3 {
 .how__number {
     position: absolute;
     color: #fff;
-    background: #4ab471;
-    font-size: 20px;
-    width: 30px;
-    line-height: 34px;
-    text-align: center;
-    height: 30px;
+    background: #57cd66;
+    font-size: 30px;
+    width: 50%;
+    height: 50%;
+    margin: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .how_work p {
