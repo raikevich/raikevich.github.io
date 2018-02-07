@@ -120,6 +120,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__logo {
     max-width:  390px;
+    display: flex;
+}
+.header__logo p {
+    margin: auto;
+    text-align: center;
 }
 .header__logo img {
     max-width: 100%;
@@ -309,8 +314,8 @@ section {
 .service__wrap {
     padding-bottom: 60%;
 }
-.service__wrap_12 {
-    padding-bottom: 30%;
+.group .service__wrap {
+    padding-bottom: 80%;
 }
 .clients__wrap_100 {
     padding-bottom: 100%;
@@ -338,6 +343,10 @@ section {
     bottom: 0;
     width: calc(100% - 143px);
 }
+.group .service__content {
+    width: 100%;
+    padding: 30px;
+}
 .clients__content {
     width: 100%;
 }
@@ -347,7 +356,10 @@ section {
     right: 60px;
     transform: translateX(300px);
 }
-
+.group .hover_link {
+    bottom: 0;
+    right: 0;
+}
 .service__content h3 {
     font-size: 24px;
     font-weight: 400;
@@ -542,7 +554,9 @@ h3 {
 .footer__links a {
     font-size: 12px;
 }
-
+.footer__links p {
+    margin-bottom: 0;
+}
 .footer__social i {
     font-size: 23px;
 }
@@ -627,14 +641,14 @@ h3 {
     position: absolute;
     color: #fff;
     background: #4ab471;
-    font-size: 23px;
-    width: 50px;
-    line-height: 50px;
+    font-size: 20px;
+    width: 30px;
+    line-height: 34px;
     text-align: center;
-    height: 50px;
+    height: 30px;
 }
 
-.how_work h3 {
+.how_work p {
     text-align: center;
 }
 .sfera_wrap {
