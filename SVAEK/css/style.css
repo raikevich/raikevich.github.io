@@ -243,17 +243,48 @@ a:hover svg {
     text-align: center;
     position: relative;
     margin-bottom: 15px;
-    line-height: 120px;
+    line-height: 90px;
 }
 
 .number_desc {
     text-align: center;
 }
-
-.number_item {
-    margin-bottom: 30px;
+.in_number_odd>[class^="col"] {
+    margin-bottom:135px;
 }
-
+.in_number_odd>[class^="col"]:nth-child(even) {
+    transform: translateY(106px);
+}
+.number_item {
+    background: #ffffff;
+    height: 100%;
+    position: relative;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+.number_item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    border-right: 50px solid #fff;
+    border-top: 104px solid transparent;
+    border-bottom: 104px solid transparent;
+}
+.number_item:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    border-left: 50px solid #fff;
+    border-top: 104px solid transparent;
+    border-bottom: 104px solid transparent;
+}
+.number_desc {
+    font-size: 14px;
+}
 .number_count:after {
     content: "";
     bottom: 0;
@@ -266,7 +297,7 @@ a:hover svg {
     border-radius: 50px;
 }
 .number_count_small {
-    font-size: 40px;
+    font-size: 30px;
 }
 .in_number {
     background: url('../img/in_number.jpg');
@@ -405,6 +436,9 @@ a:hover .fb {
 .col-auto {
     max-width: 100%;
 }
+.pb_70 {
+    padding-bottom: 70%;
+}
 
 
 
@@ -434,6 +468,19 @@ a:hover .fb {
 
     .preim_title p {
         font-size: 30px;
+    }
+    .number_item:before,
+    .number_item:after {
+        content: none;
+    }
+    .number_item {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+    }
+    .in_number_odd>[class^="col"] {
+        margin-bottom: 0;
+        transform: none !important;
     }
 }
 
