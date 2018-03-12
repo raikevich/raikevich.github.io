@@ -70,4 +70,21 @@ $(document).ready(function() {
         }
     });
 
+    var H_pro=0;
+    var h_pro=0;
+
+    $('.pro_content>div').each(function (i,e) {
+        h_pro = $(e).height();
+        if (h_pro>H_pro) H_pro=h_pro;
+    });
+
+    $('.pro_content').height(H_pro);
+
+    $('[id^="pro_"]').on('mouseenter',function () {
+        $('.pro_links>p').removeClass('active');
+        $('.pro_content>div').removeClass('active');
+        $(this).addClass('active');
+        var t_id = $(this).attr("id");
+        $('#'+t_id+'_div').addClass('active');
+    });
 });
