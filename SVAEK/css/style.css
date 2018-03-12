@@ -417,9 +417,30 @@ a:hover .news_link .news_title > div {
 }
 .vacancy_link {
     top: 0;
+    background: rgba(50, 64, 73, .8);
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s;
 }
-.vacancy_link .news_more {
-    right:-100%;
+.vac_comp {
+    color: #ffffff;
+}
+.vac_city {
+    font-family: Play;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 50px;
+}
+.vac_more {
+    position: absolute;
+    bottom: 15px;
+    right: -100px;
+    font-family: Play;
+    font-size: 12px;
+    text-decoration: underline;
+    transition: all .3s;
+    color: #ffffff;
 }
 .vac_title {
     font-family: Play;
@@ -429,8 +450,8 @@ a:hover .news_link .news_title > div {
 a:hover .vacancy_link {
     background: rgba(50, 64, 73, 1);
 }
-a:hover .vacancy_link .news_more {
-    right:15px;
+a:hover .vac_more {
+    right: 15px;
 }
 footer {
     background: #324049;
@@ -612,21 +633,16 @@ form.search button {
 .share a {
     margin-left: 15px;
 }
-.member_wrap {
-    position: relative;
-}
-.member_wrap .img_cover {
-    padding-bottom: 70%;
-}
 .member_link {
     position: absolute;
-    top: 0;
+    top: -51px;
     left:50%;
-    transform: translate(-50%,10%);
+    transform: translate(-50%,50%);
     width:50%;
     padding-bottom: 50%;
     border-radius: 50%;
     background: rgba(50, 64, 73, .8);
+    transition: all .3s;
 }
 .member_link img {
     max-height: 60%;
@@ -634,26 +650,24 @@ form.search button {
     height: auto;
     width: auto;
 }
-.member_title {
-    position: absolute;
-    text-align: center;
-    width: 90%;
-    left: 5%;
-    bottom: 0;
-    background: #324049;
-    color: #fff;
-    font-family: Play;
-    padding: 9px;
-    transform: translateY(50%);
-}
-.mb60 {
-    margin-bottom: 60px;
+a:hover .member_link {
+    opacity: 0;
 }
 .contact_data a {
     font-family: Play;
     font-weight:700;
 }
-
+.greyscale-100 {
+    filter: grayscale(100%);
+}
+.forgot {
+    font-size: 12px;
+    margin-top: 15px;
+}
+.login section {
+    height: 100%;
+    margin-bottom: 0;
+}
 
 
 
