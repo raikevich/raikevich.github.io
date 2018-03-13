@@ -9,6 +9,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="css/lightslider.min.css" media="all"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
 </head>
 
@@ -23,7 +24,7 @@
                 <ul class="nav">
                     <i class="fa fa-close"></i>
                     <li><a href="#">Новости и мероприятия</a></li>
-                    <li><a href="#" class="active">Вакансии</a></li>
+                    <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Что такое СВАЭК</a></li>
                     <li><a href="#">Участники</a></li>
                     <li><a href="#">Контакты</a></li>
@@ -37,41 +38,60 @@
     </header>
 </div>
 <div class="container">
+    <div class="row align-items-center">
+        <div class="col-md-auto">
+            <ul class="nav nav_lk">
+                <i class="fa fa-close"></i>
+                <li><a href="#"">Мой профиль</a></li>
+                <li><a href="#">Страница компании</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#" class="active">Вакансии</a></li>
+                <li><a href="#">Эксперты</a></li>
+            </ul>
+        </div>
+        <div class="col-md-auto ml-md-auto">
+            <a href="#" class="add_vak">Добавить вакансию</a>
+        </div>
+    </div>
+    <form action="#" class="p-0">
+        <section>
+            <div class="row align-items-center section_header mb30">
+                <div class="col-auto">
+                    <h2><span>Добавить</span> вакансию</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <input placeholder="Напишите заголовок вакансии">
+                </div>
+                <div class="col-md-4">
+                    <select>
+                        <option>Выберите город</option>
+                        <option>Город 1</option>
+                        <option>Город 2</option>
+                        <option>Город 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <textarea placeholder="Описание вакансии" rows="5"></textarea>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-8">
+                    <textarea placeholder="Требования к соискателям" rows="5"></textarea>
+                </div>
+                <div class="w-100"></div><div class="col-md-8">
+                <textarea placeholder="Условия работы и трудоустройства" rows="5"></textarea>
+            </div>
+            </div>
+            <button type="submit" class="btn">Опубликовать</button>
+        </section>
+    </form>
     <section>
         <div class="row align-items-center section_header mb30">
             <div class="col-auto">
-                <h1><span>Вакансии</span> от участников ассоциации</h1>
-            </div>
-            <div class="col-md-4 ml-auto text-center text-md-right">
-                <a href="#" class="btn">отправить резюме</a>
-            </div>
-        </div>
-        <div class="row mb-4 align-items-center">
-            <div class="col">
-                <div class="row">
-                    <div class="col">
-                        <select>
-                            <option>Выберите компанию</option>
-                            <option>Компания 1</option>
-                            <option>Компания 2</option>
-                            <option>Компания 3</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <select>
-                            <option>Выберите город</option>
-                            <option>Город 1</option>
-                            <option>Город 2</option>
-                            <option>Город 3</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <form action="#" class="search">
-                    <input placeholder="поиск по ключевому слову или названию вакансии">
-                    <button></button>
-                </form>
+                <h2><span>Опубликованные</span> вакансии</h2>
             </div>
         </div>
         <div class="row">
@@ -84,6 +104,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
             <div class="col-sm-3 mb30">
                 <a href="#">
@@ -94,6 +118,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
             <div class="col-sm-3 mb30">
                 <a href="#">
@@ -104,6 +132,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
             <div class="col-sm-3 mb30">
                 <a href="#">
@@ -114,6 +146,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
             <div class="col-sm-3 mb30">
                 <a href="#">
@@ -124,6 +160,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
             <div class="col-sm-3 mb30">
                 <a href="#">
@@ -134,6 +174,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
             <div class="col-sm-3 mb30">
                 <a href="#">
@@ -144,6 +188,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
             <div class="col-sm-3 mb30">
                 <a href="#">
@@ -154,6 +202,10 @@
                         <div class="vac_more">Подробнее</div>
                     </div>
                 </a>
+                <div class="lk_news_edit">
+                    <a href="#"><img src="img/pen.png" alt="Pen"></a>
+                    <a href="#"><img src="img/basket.png" alt="Basket"></a>
+                </div>
             </div>
         </div>
         <ul class="pagination justify-content-center">
@@ -208,5 +260,6 @@
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lightslider.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </html>

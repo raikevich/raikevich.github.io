@@ -87,4 +87,39 @@ $(document).ready(function() {
         var t_id = $(this).attr("id");
         $('#'+t_id+'_div').addClass('active');
     });
+
+    if ($('.sfera_d').length) {
+        $('.add_sfera').on('click', function () {
+            $('.sfera_d').append('<div class="dop_sfera"><input placeholder="Укажите сферу деятельности"><div class="remove_sfera"></div></div>');
+            refresh_sfera();
+        });
+        refresh_sfera();
+    }
+    $.datepicker.setDefaults(
+        {
+            closeText: 'Закрыть',
+            prevText: '',
+            currentText: 'Сегодня',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+                'Июл','Авг','Сен','Окт','Ноя','Дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        });
+    if ($('#date').length) {
+        $('#date').datepicker();
+    }
 });
+function refresh_sfera() {
+    $('.remove_sfera').on('click', function () {
+        $(this).parent().remove();
+    });
+}
