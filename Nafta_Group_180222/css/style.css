@@ -1074,6 +1074,113 @@ h3 {
     text-decoration: none;
 }
 
+
+
+
+
+
+.pillar {
+    height: 200px;
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.sched_desc p {
+    line-height: initial;
+}
+p.sched_year {
+    color: #399aca;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: initial;
+}
+/*График*/
+.schedule {
+    margin-bottom: 50px;
+}
+.pillar div {
+    bottom:  0;
+    position: absolute;
+    width: calc(100% - 35px);
+    left: 0;
+}
+.pillar-1 div {
+    background: #b0e2fb;
+    height: 30%;
+}
+.pillar-1 div:after {
+    background: #98d5f3;
+}
+.pillar-2 div{
+    background: #98d5f3;
+    height:35.4%;
+}
+.pillar-2 div:after{
+    background: #83c9eb;
+}
+.pillar-3 div{
+    background: #83c9eb;
+    height: 39.5%;
+}
+.pillar-3 div:after {
+    background: #73c0e6;
+}
+.pillar-4 div{
+    background: #73c0e6;
+    height: 47.9%;
+}
+.pillar-4 div:after {
+    background: #5eb2db;
+}
+.pillar-5 div{
+    background: #5eb2db;
+    height: 56.2%;
+}
+.pillar-5 div:after {
+    background: #4da8d4;
+}
+.pillar-6 div{
+    background: #55afdb;
+    height: 61.4%;
+}
+.pillar-6 div:after{
+    background: #399ac9;
+}
+.pillar-7 div{
+    background: #46a6d5;
+    height: 81.6%;
+}
+.pillar-7 div:after {
+    background: #2b8dbc;
+}
+.pillar-8 div{
+    background: #399aca;
+    height: 100%;
+}
+.pillar-8 div:after {
+    background: #1c7cab;
+}
+.pillar div:after {
+    content: '';
+    height: 100%;
+    left: 100%;
+    bottom: 6px;
+    position: absolute;
+    width: 21px;
+    transform: skewY(-30deg);
+}
+.pillar div:before {
+    content: '';
+    width: 100%;
+    height: 12px;
+    bottom: 100%;
+    left: 10px;
+    position: absolute;
+    background: #c4ebfe;
+    transform: skewX(-60deg);
+}
+/*График*/
 @media (max-width: 1199px) {
     .nav {
         position: fixed;
