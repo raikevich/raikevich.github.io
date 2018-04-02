@@ -15,7 +15,7 @@ $(document).ready(function() {
             pause: 3000,
             speed: 700,
             pauseOnHover: false,
-            controls:false,
+            controls:true,
             responsive: [
                 {
                     breakpoint: 991,
@@ -36,6 +36,23 @@ $(document).ready(function() {
                     }
                 }
             ]
+        });
+    }
+
+    if ($('.btn_slider__prev').length) {
+        $('.btn_slider__prev').on('click', function () {
+            $('.lSPrev').trigger('click');
+        });
+    }
+    if ($('.btn_slider__next').length) {
+        $('.btn_slider__next').on('click', function () {
+            $('.lSNext').trigger('click');
+        });
+    }
+
+    if ($('#file_rezume').length) {
+        $('#file_rezume').on('change', function() {
+            $('label[for="file_rezume"] svg').css('fill','red');
         });
     }
 
@@ -73,20 +90,22 @@ $(document).ready(function() {
     var H_pro=0;
     var h_pro=0;
 
-    $('.pro_content>div').each(function (i,e) {
-        h_pro = $(e).height();
-        if (h_pro>H_pro) H_pro=h_pro;
-    });
+    if ($('.pro_content').length) {
+        $('.pro_content>div').each(function (i,e) {
+            h_pro = $(e).height();
+            if (h_pro>H_pro) H_pro=h_pro;
+        });
 
-    $('.pro_content').height(H_pro);
+        $('.pro_content').height(H_pro);
 
-    $('[id^="pro_"]').on('mouseenter',function () {
-        $('.pro_links>p').removeClass('active');
-        $('.pro_content>div').removeClass('active');
-        $(this).addClass('active');
-        var t_id = $(this).attr("id");
-        $('#'+t_id+'_div').addClass('active');
-    });
+        $('[id^="pro_"]').on('mouseenter',function () {
+            $('.pro_links>p').removeClass('active');
+            $('.pro_content>div').removeClass('active');
+            $(this).addClass('active');
+            var t_id = $(this).attr("id");
+            $('#'+t_id+'_div').addClass('active');
+        });
+    }
 
     if ($('.sfera_d').length) {
         $('.add_sfera').on('click', function () {
