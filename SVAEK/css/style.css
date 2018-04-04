@@ -60,6 +60,8 @@ b {
 h1 {
     font-size: 30px;
     font-family: Play;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
 
 .header__sign a {
@@ -211,6 +213,7 @@ header {
     font-size: 48px;
     text-transform: uppercase;
     margin-left: 30px;
+    font-weight: 700;
 }
 
 .justify-content-evenly {
@@ -231,7 +234,7 @@ header {
     font-size: 18px;
     letter-spacing: 22px;
     font-weight: 700;
-    margin-top: -14px;
+    margin-top: -25px;
     line-height: 25px;
     color: #60efd0;
 }
@@ -511,15 +514,25 @@ a:hover .member_title{
     position: relative;
     transition: all .3s;
 }
-
+.vacancy_link img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: auto;
+    opacity: .2;
+}
 .vac_comp {
     color: #ffffff;
+    position: relative;
 }
 
 .vac_city {
     font-family: Play;
     color: #fff;
     margin-top: 50px;
+    position: relative;
 }
 
 .vac_more {
@@ -537,6 +550,7 @@ a:hover .member_title{
     font-family: Play;
     color: #60efd0;
     font-size: 18px;
+    position: relative;
 }
 
 a:hover .vacancy_link {
@@ -635,7 +649,7 @@ a:hover .fb {
     max-width: 100%;
 }
 .pb_30 {
-    padding-bottom: 30%;
+    padding-bottom: 35%;
 }
 .pb_70 {
     padding-bottom: 70%;
@@ -1072,6 +1086,28 @@ a:hover .member_link {
     position: relative;
     top: 4px;
     margin-right: 5px;
+}
+.page-link {
+    background: transparent;
+    border: none;
+}
+
+.page-link:hover {
+    background: transparent;
+}
+.breadcr {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: #aaa;
+}
+
+.breadcr a {
+    color: #aaa;
+}
+
+.breadcr a:hover {
+    color: #5e83fb;
 }
 
 @media (min-width: 1400px) {
