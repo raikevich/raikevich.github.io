@@ -859,10 +859,12 @@ section {
     z-index: 999;
     background: #000;
     transition: all .3s;
+    overflow: auto;
 }
 
 .menu_wrap {
     margin: auto;
+    padding: 30px 0;
 }
 
 .menu_wrap a {
@@ -947,6 +949,13 @@ section {
 }
 .modalw__active .modalw_form {
     transform: translateY(0vh);
+}
+.menu_social {
+    margin-top: 20px;
+}
+
+.menu_social a {
+    display: inline-block;
 }
 @media (max-width: 1400px) {
     .numberBlock {

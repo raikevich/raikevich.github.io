@@ -73,18 +73,37 @@ $(document).ready(function() {
 
     if ($('.js_modal').length) {
         $('.js_modal').on('click', function() {
-            $('.modalw').addClass('modalw__active');
+            $('.js_modalw').addClass('modalw__active');
             $('body').addClass('o-hidden').css('margin-right', wp + 'px');
         });
-        $('.modalw_close').on('click', function() {
-            $('.modalw').removeClass('modalw__active');
+        $('.js_modalw_close').on('click', function() {
+            $('.js_modalw').removeClass('modalw__active');
             $('body').removeClass('o-hidden').css('margin-right','0px');
         });
-        $('.modalw').on('click', function(e){
+        $('.js_modalw').on('click', function(e){
             if ($(this).has(e.target).length === 0) {
-                $('.modalw').removeClass('modalw__active');
+                $('.js_modalw').removeClass('modalw__active');
                 $('body').removeClass('o-hidden').css('margin-right','0px');
             }
         });
     }
+
+    if ($('.js_modal_2').length) {
+        $('.js_modal_2').on('click', function() {
+            $('.js_modalw_2').addClass('modalw__active');
+            $('body').addClass('o-hidden').css('margin-right', wp + 'px');
+        });
+        $('.js_modalw_2_close').on('click', function() {
+            $('.js_modalw_2').removeClass('modalw__active');
+            $('body').removeClass('o-hidden').css('margin-right','0px');
+        });
+        $('.js_modalw_2').on('click', function(e){
+            if ($(this).has(e.target).length === 0) {
+                $('.js_modalw_2').removeClass('modalw__active');
+                $('body').removeClass('o-hidden').css('margin-right','0px');
+            }
+        });
+    }
+
+    $('input.js_tel').mask('+7 (999) 999-99-99');
 });
