@@ -242,6 +242,7 @@ p {
 .problem_desc {
     margin-bottom: 30px;
     padding-left: 30px;
+    font-size: 16px;
 }
 
 .problem_note {
@@ -318,7 +319,7 @@ p {
 
 .get_img {
     margin: auto;
-    width: 65%;
+    width: 60%;
 }
 
 .get_title {
@@ -331,6 +332,7 @@ p {
 .get_item {
     position: absolute;
     font-weight: 600;
+    font-size: 15px;
 }
 
 .get_item__1 {
@@ -376,6 +378,35 @@ p {
     margin-left: 50px;
 }
 
+.calc .numberBlock {
+    transform: translateX(-180px);
+}
+
+.calc .section_title {
+    margin-bottom: 26px;
+}
+
+.calc_status > div {
+    background: #cfa55b;
+    height: 100%;
+    transition: all .3s;
+}
+
+.calc_question input[type="radio"] + div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background: #cfa55b;
+    border-radius: 50%;
+    border: 10px solid #e6e6e6;
+    transition: all .3s;
+}
+
+.calc_question input[type="radio"]:checked + div {
+    border-width: 5px;
+}
 .calc {
 }
 
@@ -394,7 +425,27 @@ p {
     font-weight: 600;
     margin-bottom: 12px;
 }
-
+.calc_number i {
+    font-style: normal;
+}
+.calc_item input {
+    width: 100%;
+    padding: 7px 20px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+}
+.calc_item input::-webkit-input-placeholder {
+    color: red;
+}
+.calc_item input::-moz-placeholder {
+    color: red;
+}
+.calc_item input:-ms-input-placeholder {
+    color: red;
+}
+.calc_item input:-moz-placeholder {
+    color: red;
+}
 .calc_status {
     width: 300px;
     height: 12px;
@@ -405,14 +456,18 @@ p {
     margin-bottom: 50px;
 }
 
-.calc_status > div {
-}
-
 .calc_question {
+    margin-bottom: 50px;
+    overflow: hidden;
+    transition: all .3s;
+    position: relative;
 }
 
 .calc_item {
-    margin-bottom: 50px;
+    transform: translateX(0%);
+    position: absolute;
+    width: 100%;
+    transition: all .3s;
 }
 
 .btn_calcBack {
@@ -444,7 +499,24 @@ p {
 .calc_image {
     width: 100%;
 }
-
+.calc_item__next, .calc_item__other, .calc_item__interview {
+    transform: translateX(100%);
+}
+.calc_item__prev {
+    transform: translateX(-100%);
+}
+.calc_item__active {
+    transform: translateX(0);
+}
+.calc_select {
+    margin-bottom: 20px;
+    background: #f2f2f2;
+    margin-left: 30px;
+    max-width: calc(100% - 30px);
+}
+.calc_select[disabled] {
+    display: none;
+}
 .case {
     background: #f2f2f2;
 }
@@ -682,12 +754,12 @@ section {
 }
 
 .get_item_left {
-    right: 86%;
+    right: 84%;
     text-align: right;
 }
 
 .get_item_right {
-    left: 86%;
+    left: 84%;
     text-align: left;
 }
 
@@ -725,18 +797,18 @@ section {
 }
 
 .get_item__2:after {
-    width: 350px;
+    width: 333px;
     transform: rotate(-21.7deg);
 }
 
 .get_item__3:after {
     width: 160px;
-    transform: rotate(-22deg);
+    transform: rotate(-18deg);
 }
 
 .get_item__4:after {
-    width: 251px;
-    transform: rotate(-8.3deg);
+    width: 242px;
+    transform: rotate(-9.1deg);
 }
 
 .get_item__5:after {
@@ -750,18 +822,18 @@ section {
 }
 
 .get_item__7:after {
-    width: 153px;
-    transform: rotate(6deg);
+    width: 163px;
+    transform: rotate(12.2deg);
 }
 
 .get_item__8:after {
     width: 210px;
-    transform: rotate(7deg);
+    transform: rotate(12deg);
 }
 
 .get_item__9:after {
     width: 230px;
-    transform: rotate(-5deg);
+    transform: rotate(4deg);
 }
 
 .sfera_buttons {
@@ -770,39 +842,6 @@ section {
 
 .sfera_note {
     font-size: 16px;
-}
-
-.calc .numberBlock {
-    transform: translateX(-140px);
-}
-
-.calc .numberBlock {
-    transform: translateX(-180px);
-}
-
-.calc .section_title {
-    margin-bottom: 26px;
-}
-
-.calc_status > div {
-    background: #cfa55b;
-    height: 100%;
-}
-
-.calc_question input[type="radio"] + div {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 20px;
-    width: 20px;
-    background: #cfa55b;
-    border-radius: 50%;
-    border: 10px solid #e6e6e6;
-    transition: all .3s;
-}
-
-.calc_question input[type="radio"]:checked + div {
-    border-width: 5px;
 }
 
 .btn_calcBack img {
@@ -957,6 +996,9 @@ section {
 .menu_social a {
     display: inline-block;
 }
+.flipster--coverflow .flipster__container {
+    padding-top: 4%;
+}
 @media (max-width: 1400px) {
     .numberBlock {
         display: none;
@@ -984,6 +1026,10 @@ section {
 
     .calc {
         padding-top: 0;
+    }
+
+    .get_item {
+        font-size: 13px;
     }
 
     .get_item__1:after {

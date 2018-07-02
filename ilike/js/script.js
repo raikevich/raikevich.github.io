@@ -5,6 +5,7 @@ $(document).ready(function() {
         $('.my-flipster').flipster({
             loop: true,
             scrollwheel: false,
+            start: 2,
             buttons: 'custom',
             buttonPrev: '<div class="flip_btn flip_btn__prev"></div>',
             buttonNext: '<div class="flip_btn flip_btn__next"></div>'
@@ -13,7 +14,7 @@ $(document).ready(function() {
     if($('.sfera_slider').length) {
         $('.sfera_slider').lightSlider({
             item: 3,
-            loop: true,
+            loop: false,
             slideMove: 1,
             pager: false,
             auto: true,
@@ -106,4 +107,57 @@ $(document).ready(function() {
     }
 
     $('input.js_tel').mask('+7 (999) 999-99-99');
+
+    if ($('.calc').length) {
+        $('.calc_question').height($('.calc_item__active').height());
+        $('.calc_question input[name="sfera"]').on('click',function () {
+            $('.calc_select').prop('disabled',true);
+            $(this).parent().next().prop('disabled',false);
+        });
+        $('.service_other').on('click',function(){
+            $('.calc_item__interview').removeClass('calc_item__next');
+            $('.calc_item__other').addClass('calc_item__next');
+            $('.calc_number i').text('14');
+            $('.calc_status>div').css('width', 2*100 / 14 + '%');
+        });
+        $('.service_interview').on('click',function(){
+            $('.calc_item__other').removeClass('calc_item__next');
+            $('.calc_item__interview').addClass('calc_item__next');
+            $('.calc_number i').text('10');
+            $('.calc_status>div').css('width', 2*100 / 10 + '%');
+        });
+        $('.js_calc_next').on('click',calcNext);
+        $('.js_calc_prev').on('click',calcPrev);
+    }
+
+    function calcNext() {
+        var sum = parseInt($('.calc_number i').text());
+        var number = parseInt($('.calc_number span').text()) + 1;
+        var er=0;
+        if ($('.calc_item__active input').val()=="") {
+            $('.calc_item__active input').attr('placeholder','Заполните поле');
+            er = 1;
+        }
+        if ($('.calc_item__active input').attr('name')=="email" && ($('.calc_item__active input').val().indexOf("@")==-1 || $('.calc_item__active input').val().indexOf(".")==-1)) {
+            er=1;
+            $('.calc_item__active input').val('');
+            $('.calc_item__active input').attr('placeholder','Введите e-mail в правильном формате');
+        }
+        if ((number<=sum) && er==0) {
+            $('.calc_number span').text(number);
+            $('.calc_status>div').css('width', number*100 / sum + '%');
+            $('.calc_item__active').toggleClass('calc_item__active calc_item__prev').nextAll('.calc_item__next').first().toggleClass('calc_item__active calc_item__next');
+            $('.calc_question').height($('.calc_item__active').height());
+        }
+    }
+    function calcPrev() {
+        var sum = parseInt($('.calc_number i').text());
+        var number = parseInt($('.calc_number span').text()) - 1;
+        if (number>0) {
+            $('.calc_number span').text(number);
+            $('.calc_status>div').css('width', number*100 / sum + '%');
+            $('.calc_item__active').toggleClass('calc_item__active calc_item__next').prevAll('.calc_item__prev').first().toggleClass('calc_item__active calc_item__prev');
+            $('.calc_question').height($('.calc_item__active').height());
+        }
+    }
 });
