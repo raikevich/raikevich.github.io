@@ -226,7 +226,8 @@ p {
 }
 
 .problem {
-    background: #f2f2f2;
+    background: url('../img/problem.jpg') 50% no-repeat;
+    background-size:cover;
 }
 
 .title_quote {
@@ -407,6 +408,7 @@ p {
 .calc_question input[type="radio"]:checked + div {
     border-width: 5px;
 }
+
 .calc {
 }
 
@@ -425,27 +427,34 @@ p {
     font-weight: 600;
     margin-bottom: 12px;
 }
+
 .calc_number i {
     font-style: normal;
 }
+
 .calc_item input {
     width: 100%;
     padding: 7px 20px;
     border-radius: 50px;
     border: 1px solid #f2f2f2;
 }
+
 .calc_item input::-webkit-input-placeholder {
     color: red;
 }
+
 .calc_item input::-moz-placeholder {
     color: red;
 }
+
 .calc_item input:-ms-input-placeholder {
     color: red;
 }
+
 .calc_item input:-moz-placeholder {
     color: red;
 }
+
 .calc_status {
     width: 300px;
     height: 12px;
@@ -499,24 +508,30 @@ p {
 .calc_image {
     width: 100%;
 }
+
 .calc_item__next, .calc_item__other, .calc_item__interview {
     transform: translateX(100%);
 }
+
 .calc_item__prev {
     transform: translateX(-100%);
 }
+
 .calc_item__active {
     transform: translateX(0);
 }
+
 .calc_select {
     margin-bottom: 20px;
     background: #f2f2f2;
     margin-left: 30px;
     max-width: calc(100% - 30px);
 }
+
 .calc_select[disabled] {
     display: none;
 }
+
 .case {
     background: #f2f2f2;
 }
@@ -939,8 +954,8 @@ section {
     height: 100%;
     z-index: 999;
     display: flex;
-    background: rgba(0,0,0,.4);
-    cursor:  pointer;
+    background: rgba(0, 0, 0, .4);
+    cursor: pointer;
     pointer-events: none;
     opacity: 0;
     transition: all .3s;
@@ -972,6 +987,7 @@ section {
     margin-bottom: 20px;
     padding: 9px 20px;
 }
+
 .modalw_close {
     position: absolute;
     width: 40px;
@@ -982,13 +998,16 @@ section {
     top: 0;
     cursor: pointer;
 }
+
 .modalw.modalw__active {
     pointer-events: auto;
     opacity: 1;
 }
+
 .modalw__active .modalw_form {
     transform: translateY(0vh);
 }
+
 .menu_social {
     margin-top: 20px;
 }
@@ -996,9 +1015,31 @@ section {
 .menu_social a {
     display: inline-block;
 }
+
 .flipster--coverflow .flipster__container {
     padding-top: 4%;
 }
+
+.menu_phone {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.form_result {
+    text-align: center;
+    margin-top: 20px;
+}
+.feedback .form_result {
+    color: #fff;
+}
+.form_result__red {
+    color: red;
+}
+
+.form_result__green {
+    color: green;
+}
+
 @media (max-width: 1400px) {
     .numberBlock {
         display: none;
@@ -1264,9 +1305,11 @@ section {
     .flip_wrap {
         padding-bottom: 100%;
     }
+
     .my-flipster li {
         width: 70%;
     }
+
     .case_image {
         margin-bottom: 45px;
     }
@@ -1293,7 +1336,6 @@ section {
     .menu {
         left: -270px;
     }
-
 
     .header_social svg {
         width: 30px;
@@ -1338,6 +1380,7 @@ section {
     .my-flipster li {
         width: 90%;
     }
+
     .section_title__line:before {
         content: none;
     }
@@ -1345,6 +1388,7 @@ section {
     .section_title__line {
         padding-left: 0;
     }
+
     .sfera_link {
         margin-left: 0;
         margin-top: 15px;

@@ -327,9 +327,7 @@
             <button class="btn js_modal">Заказать проверку</button>
             <a href="#" class="sfera_link">Скачать образец отчета</a>
         </div>
-        <p class="sfera_note"><b>Персонал понимает, что теперь качество работы контролируется постоянно, а не только
-            когда «в поле зрения»
-            находится менеджер или приехала официальная проверка из офиса.</b></p>
+        <p class="sfera_note"><b>Персонал понимает, что теперь качество работы контролируется постоянно, а не только когда они в поле зрения руководителя или приехала официальная проверка из офиса.</b></p>
     </div>
 </section>
 <section class="five" id="five2">
@@ -380,14 +378,14 @@
                     <div class="col col-md-6">
                         <div class="numberBlock">08<br>/<br>10</div>
                         <h2 class="section_title">Калькулятор Стоимости</h2>
-                        <div class="calc_number">вопросы <span>1</span>/<i>14</i></div>
+                        <div class="calc_number">вопросы <span>1</span>/<i>8</i></div>
                         <div class="calc_status">
                             <div style="width: 8.333%"></div>
                         </div>
-                        <form class="calc_question" action="">
+                        <form id="calc_question" class="calc_question" action="">
                             <div class="calc_item calc_item__active">
                                 <p class="calc_questionTitle">Выберите вашу сферу деятельности:</p>
-                                <label><input type="radio" name="sfera" value="sfera1" checked="checked">
+                                <label><input type="radio" name="sfera" value="розничная торговля и интернет магазины" checked="checked">
                                     <div></div>
                                     розничная торговля и интернет магазины</label>
                                 <select name="sfera_roznica" class="calc_select">
@@ -397,7 +395,7 @@
                                     <option>мебель и отделочные материалы</option>
                                     <option>продукты, спиртное, бытовая химия</option>
                                 </select>
-                                <label><input type="radio" name="sfera" value="sfera2">
+                                <label><input type="radio" name="sfera" value="сфера обслуживания">
                                     <div></div>
                                     сфера обслуживания</label>
                                 <select name="sfera_obsluzhivanie" class="calc_select" disabled>
@@ -431,23 +429,23 @@
                             </div>
                             <div class="calc_item calc_item__next">
                                 <p class="calc_questionTitle">Выберите интересующую услугу:</p>
-                                <label><input type="radio" name="service" value="service1" checked="checked" class="service_other">
+                                <label><input type="radio" name="service" value="проверка тайным покупателем" checked="checked" class="service_other">
                                     <div></div>
                                     проверка тайным покупателем</label>
-                                <label><input type="radio" name="service" value="service2" class="service_other">
+                                <label><input type="radio" name="service" value="аудит отделов" class="service_other">
                                     <div></div>
                                     аудит отделов</label>
-                                <label><input type="radio" name="service" value="service3" class="service_interview">
+                                <label><input type="radio" name="service" value="интервьюирование" class="service_interview">
                                     <div></div>
                                     интервьюирование</label>
-                                <label><input type="radio" name="service" value="service4" class="service_other">
+                                <label><input type="radio" name="service" value="бенчмаркетинг" class="service_other">
                                     <div></div>
                                     бенчмаркетинг</label>
-                                <label><input type="radio" name="service" value="service5" class="service_other">
+                                <label><input type="radio" name="service" value="стандарты качества" class="service_other">
                                     <div></div>
                                     стандарты качества</label>
                             </div>
-                            <div class="calc_item calc_item__other calc_item__next">
+                            <!--<div class="calc_item calc_item__other calc_item__next">
                                 <p class="calc_questionTitle">Какое количество проверок вы планируете на 1-го сотрудника</p>
                                 <label><input type="radio" name="proverok" value="proverok1" checked="checked">
                                     <div></div>
@@ -464,16 +462,16 @@
                                 <label><input type="radio" name="proverok" value="proverok5">
                                     <div></div>
                                     больше 10</label>
-                            </div>
+                            </div>-->
                             <div class="calc_item calc_item__other calc_item__next">
                                 <p class="calc_questionTitle">Какое количество сотрудников, которых необходимо протестировать (общее количество во всех точках, магазинах)</p>
                                 <input type="number" name="sotrudnikov">
                             </div>
-                            <div class="calc_item calc_item__other calc_item__next">
+                            <!--<div class="calc_item calc_item__other calc_item__next">
                                 <p class="calc_questionTitle">Количество локаций (адресов), общее количество</p>
                                 <input type="number" name="lokacii">
-                            </div>
-                            <div class="calc_item calc_item__other calc_item__interview calc_item__next">
+                            </div>-->
+                            <!--<div class="calc_item calc_item__other calc_item__interview calc_item__next">
                                 <p class="calc_questionTitle">Требуемая аудитория</p>
                                 <label><input type="radio" name="auditoria" value="auditoria1" checked="checked">
                                     <div></div>
@@ -487,36 +485,36 @@
                                 <label><input type="radio" name="auditoria" value="auditoria4">
                                     <div></div>
                                     дети</label>
-                            </div>
+                            </div>-->
                             <div class="calc_item calc_item__other calc_item__next">
                                 <p class="calc_questionTitle">Требуется ли совершать покупку?</p>
-                                <label><input type="radio" name="pokupka" value="pokupka1" checked="checked">
+                                <label><input type="radio" name="pokupka" value="да" checked="checked">
                                     <div></div>
                                     да</label>
-                                <label><input type="radio" name="pokupka" value="pokupka2">
+                                <label><input type="radio" name="pokupka" value="нет">
                                     <div></div>
                                     нет</label>
                             </div>
-                            <div class="calc_item calc_item__other calc_item__interview calc_item__next">
+                            <!--<div class="calc_item calc_item__other calc_item__interview calc_item__next">
                                 <p class="calc_questionTitle">Возрастные критерии тайных покупателей (пример 25-40 лет)</p>
                                 <input type="text" name="vozrast">
-                            </div>
+                            </div>-->
                             <div class="calc_item calc_item__other calc_item__interview calc_item__next">
                                 <p class="calc_questionTitle">Укажите общую локацию проведения исследования</p>
-                                <label><input type="radio" name="obslokacii" value="obslokacii1" checked="checked">
+                                <label><input type="radio" name="obslokacii" value="только Москва" checked="checked">
                                     <div></div>
                                     только Москва</label>
-                                <label><input type="radio" name="obslokacii" value="obslokacii2">
+                                <label><input type="radio" name="obslokacii" value="Москва и область">
                                     <div></div>
                                     Москва и область</label>
-                                <label><input type="radio" name="obslokacii" value="obslokacii3">
+                                <label><input type="radio" name="obslokacii" value="другой город">
                                     <div></div>
                                     другой город</label>
-                                <label><input type="radio" name="obslokacii" value="obslokacii4">
+                                <label><input type="radio" name="obslokacii" value="несколько городов">
                                     <div></div>
                                     несколько городов</label>
                             </div>
-                            <div class="calc_item calc_item__other calc_item__interview calc_item__next">
+                            <!--<div class="calc_item calc_item__other calc_item__interview calc_item__next">
                                 <p class="calc_questionTitle">Ранее прибегали к услугам тайного покупателя?</p>
                                 <label><input type="radio" name="ranee" value="ranee1" checked="checked">
                                     <div></div>
@@ -524,8 +522,8 @@
                                 <label><input type="radio" name="ranee" value="ranee2">
                                     <div></div>
                                     нет</label>
-                            </div>
-                            <div class="calc_item calc_item__other calc_item__interview calc_item__next">
+                            </div>-->
+                            <!--<div class="calc_item calc_item__other calc_item__interview calc_item__next">
                                 <p class="calc_questionTitle">Уже имеется чек-лист (информация по каким критериям проводить исследование</p>
                                 <label><input type="radio" name="checklist" value="checklist1" checked="checked">
                                     <div></div>
@@ -533,7 +531,7 @@
                                 <label><input type="radio" name="checklist" value="checklist2">
                                     <div></div>
                                     нет</label>
-                            </div>
+                            </div>-->
                             <div class="calc_item calc_item__other calc_item__interview calc_item__next">
                                 <p class="calc_questionTitle">Ваше имя</p>
                                 <input type="text" name="imya">
@@ -545,6 +543,8 @@
                             <div class="calc_item calc_item__other calc_item__interview calc_item__next">
                                 <p class="calc_questionTitle">Телефон <small>(вся информация строго конфиденциальна и нужна только для уточнения данных и точного расчета стоимости услуг)</small></p>
                                 <input type="text" name="phone" class="js_tel">
+                            </div>
+                            <div class="calc_item calc_item__other calc_item__interview calc_item__next calc_item_res">
                             </div>
                         </form>
                         <button class="btn btn_calcBack js_calc_prev"><img src="img/back.svg" alt="back"></button>
@@ -593,24 +593,29 @@
             <div class="numberBlock">09<br>/<br>10</div>
             Остались вопросы? Свяжитесь с нами
         </h2>
-        <form action="" class="feedback_form">
+        <form action="" class="feedback_form" id="forma_obratnoi_svyazi">
             <div class="row">
                 <div class="col-12 col-md">
-                    <input type="text" placeholder="Ваше имя *" required>
+                    <input type="text" placeholder="Ваше имя *" required name="name">
                 </div>
                 <div class="col-12 col-md">
-                    <input type="email" placeholder="Ваш email">
+                    <input type="email" placeholder="Ваш email *" required name="mail">
                 </div>
                 <div class="col-12 col-md">
-                    <input class="js_tel" type="tel" placeholder="Ваш телефон *" required>
+                    <input class="js_tel" type="tel" placeholder="Ваш телефон" name="phone">
                 </div>
                 <div class="col-12">
-                    <textarea name="text" rows="3" placeholder="Вопрос *" required></textarea>
+                    <textarea name="message" rows="3" placeholder="Вопрос"></textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <button type="submit" class="btn btn__white">Отправить</button>
+                    <button class="btn btn__white js_btn">Отправить</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <div class="form_result"></div>
                 </div>
             </div>
         </form>
@@ -641,6 +646,7 @@
 <nav class="menu">
     <div class="menu_wrap">
         <a href="#header"><img class="header_logoImg" src="img/logo.svg" alt="Logo"></a>
+        <p class="menu_phone"><a href="tel:+79261223985">+7 926 122 39 85</a></p>
         <a href="#five">5 причин работать с нами</a>
         <a href="#problem">Проблемы сервиса</a>
         <a href="#service">Наши услуги</a>
@@ -665,22 +671,24 @@
     <div class="menu_btn"></div>
 </nav>
 <div class="modalw js_modalw">
-    <form action="" class="modalw_form">
+    <form action class="modalw_form" id="forma_ostavte_zayavku">
         <div class="modalw_close js_modalw_close"></div>
         <h3>Отправить заявку</h3>
-        <input type="text" placeholder="Ваше имя *" required>
-        <input class="js_tel" type="tel" placeholder="Ваш телефон *" required>
-        <button type="submit" class="btn">Отправить</button>
+        <input type="text" placeholder="Ваше имя *" required name="name">
+        <input class="js_tel" type="tel" placeholder="Ваш телефон *" required name="phone">
+        <button class="btn js_btn">Отправить</button>
+        <div class="form_result"></div>
     </form>
 </div>
 <div class="modalw js_modalw_2">
-    <form action="" class="modalw_form">
+    <form action class="modalw_form" id="forma_uznayte_o_10_krutyh_laifhakah">
         <div class="modalw_close js_modalw_2_close"></div>
         <h3>Отправить заявку</h3>
-        <input type="text" placeholder="Ваше имя *" required>
-        <input type="email" placeholder="Ваш email">
-        <input class="js_tel" type="tel" placeholder="Ваш телефон *" required>
-        <button type="submit" class="btn">Отправить</button>
+        <input type="text" placeholder="Ваше имя *" required name="name">
+        <input type="email" placeholder="Ваш email *" required name="mail">
+        <input class="js_tel" type="tel" placeholder="Ваш телефон" name="phone">
+        <button class="btn js_btn">Отправить</button>
+        <div class="form_result"></div>
     </form>
 </div>
 </body>

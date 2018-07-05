@@ -117,14 +117,14 @@ $(document).ready(function() {
         $('.service_other').on('click',function(){
             $('.calc_item__interview').removeClass('calc_item__next');
             $('.calc_item__other').addClass('calc_item__next');
-            $('.calc_number i').text('14');
-            $('.calc_status>div').css('width', 2*100 / 14 + '%');
+            $('.calc_number i').text('8');
+            $('.calc_status>div').css('width', 2*100 / 8 + '%');
         });
         $('.service_interview').on('click',function(){
             $('.calc_item__other').removeClass('calc_item__next');
             $('.calc_item__interview').addClass('calc_item__next');
-            $('.calc_number i').text('10');
-            $('.calc_status>div').css('width', 2*100 / 10 + '%');
+            $('.calc_number i').text('6');
+            $('.calc_status>div').css('width', 2*100 / 6 + '%');
         });
         $('.js_calc_next').on('click',calcNext);
         $('.js_calc_prev').on('click',calcPrev);
@@ -148,16 +148,73 @@ $(document).ready(function() {
             $('.calc_status>div').css('width', number*100 / sum + '%');
             $('.calc_item__active').toggleClass('calc_item__active calc_item__prev').nextAll('.calc_item__next').first().toggleClass('calc_item__active calc_item__next');
             $('.calc_question').height($('.calc_item__active').height());
+            if (number==sum) {
+                $('.js_calc_next').addClass('js_calc_send').text('Отправить');
+            }
+        }
+        if ((number>sum) && er==0) {
+            var form = $('#calc_question');
+            var t = form.serialize();
+            var res = form.find('.calc_item_res');
+            $.ajax({
+                type: "POST",
+                url: '/calc.php',
+                data: t,
+                beforeSend: function () {
+                    $('.calc_item__active').toggleClass('calc_item__active calc_item__prev');
+                    $('.calc_item_res').toggleClass('calc_item__active calc_item__next');
+                    $('.js_calc_send').addClass('d-none');
+                },
+                error: function () {
+                    res.text('Ошибка сервера. Попробуйте позже');
+                },
+                success: function (data) {
+                    res.html(data);
+                }
+            });
         }
     }
     function calcPrev() {
         var sum = parseInt($('.calc_number i').text());
         var number = parseInt($('.calc_number span').text()) - 1;
-        if (number>0) {
-            $('.calc_number span').text(number);
-            $('.calc_status>div').css('width', number*100 / sum + '%');
+        if ($('.js_calc_next').hasClass('d-none')) {
             $('.calc_item__active').toggleClass('calc_item__active calc_item__next').prevAll('.calc_item__prev').first().toggleClass('calc_item__active calc_item__prev');
-            $('.calc_question').height($('.calc_item__active').height());
+            $('.js_calc_send').removeClass('d-none');
+        } else {
+            if (number > 0) {
+                if (number <= sum)
+                    $('.calc_number span').text(number);
+                $('.calc_status>div').css('width', number * 100 / sum + '%');
+                $('.calc_item__active').toggleClass('calc_item__active calc_item__next').prevAll('.calc_item__prev').first().toggleClass('calc_item__active calc_item__prev');
+                $('.calc_question').height($('.calc_item__active').height());
+            }
+            if (number + 1 == sum) {
+                $('.js_calc_next').removeClass('js_calc_send').text('Далее');
+            }
         }
     }
+
+    $('button.js_btn').on('click', function (e) {
+        e.preventDefault();
+        var form = $(this).parents('form');
+        var t = form.serialize();
+        var res = $(this).parents('form').find('.form_result');
+        t = t+'&form='+form.attr('id');
+
+        $.ajax({
+            type: "POST",
+            url: '/mail.php',
+            data: t,
+            beforeSend: function () {
+                res.html('');
+            },
+            error: function () {
+                res.text('Ошибка сервера. Попробуйте позже');
+            },
+            success: function (data) {
+                res.html(data);
+            }
+        });
+
+    });
 });
