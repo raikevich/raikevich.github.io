@@ -149,6 +149,7 @@ p {
     padding: 7px 20px;
     transition: all .3s;
     min-width: 200px;
+    color: #000;
 }
 
 .btn__white {
