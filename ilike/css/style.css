@@ -541,9 +541,6 @@ p {
     position: relative;
 }
 
-.case_slider {
-}
-
 .title_case {
     font-size: 20px;
     font-weight: 600;
@@ -1039,6 +1036,11 @@ section {
 
 .form_result__green {
     color: green;
+}
+
+.footer_job {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media (max-width: 1400px) {
