@@ -14,13 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 </head>
 
-<body id="top">
+<body id="top" class="group">
 <div class="container">
     <header>
         <div class="row justify-content-between align-items-center">
             <div class="col col-md-auto header__logo">
-                <a href="/"><img src="img/logo.png" alt="Logo"/></a>
-                <p>Орган по сертификации</p>
+                <a href="/"><img src="img/logo_group.png" alt="Logo"/></a>
+                <p>Эксперт в промышленной безопасности</p>
             </div>
             <div class="col header__menu">
                 <ul class="nav">
@@ -56,7 +56,7 @@
                 <div class="contacts__wrap">
                     <div class="contacts__content">
                         <p class="cont_header">e-mail</p>
-                        <p class="cont_cont"><a href="mailto:info@naftatest.ru">info@naftatest.ru</a></p>
+                        <p class="cont_cont"><a href="mailto:info@naftagroup.net">info@naftagroup.net</a></p>
                         <p class="cont_note">консультация<br>общие вопросы<br>поддержка клиентов</p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="contacts__wrap">
                     <div class="contacts__content">
                         <p class="cont_header">адрес</p>
-                        <p class="cont_cont">Казань,<br>ул. Гвардейская 54е</p>
+                        <p class="cont_cont">420087, Республика Татарстан, г. Казань,<br>ул. Гвардейская 54е, этаж 5, пом. 501, 502, 503, 504, 505</p>
                     </div>
                 </div>
             </div>
@@ -77,8 +77,8 @@
             <p>Общество с ограниченной ответственностью "Нафта-Тест"</p>
             <p>ИНН 1658203266</p>
             <p>ОГРН 1171690105795</p>
-            <p>Юридический адрес: 420066, Татарстан Республика, г. Казань, ул. Бондаренко, д. 23, пом.1100,оф.4</p>
-            <a href="#"><button class="btn btn-green">Скачать карту партнера</button></a>
+            <p>Юридический адрес: 420066, Татарстан Республика, г. Казань, ул. Бондаренко, д. 23, пом.1100, оф.4</p>
+            <a href="docs/karta.docx"><button class="btn btn-green">Скачать карту партнера</button></a>
         </div>
     </section>
     <section class="feedback" id="feedback">
@@ -86,35 +86,39 @@
         <p>Оставьте свои данные и мы перезвоним в течение рабочего дня.</p>
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form action="#">
+                <form action="" id="send_mail">
                     <div class="row">
                         <div class="col-md">
-                            <input type="text" placeholder="Имя">
+                            <input type="text" placeholder="Имя" name="name" required>
                         </div>
                         <div class="col-md">
-                            <input type="tel" placeholder="Телефон" pattern="[\+]{0,1}[0-9]{7,30}" title="Допускается ввод знака '+' и цифр">
+                            <input type="tel" name="phone" placeholder="Телефон" pattern="[\+]{0,1}[0-9]{7,30}" title="Допускается ввод знака '+' и цифр" required>
                         </div>
                         <div class="col-md">
-                            <input type="email" placeholder="E-mail">
+                            <input type="email" name="email" placeholder="E-mail" required>
                         </div>
                         <div class="col-12">
-                            <textarea placeholder="Ваш вапрос" rows="3"></textarea>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-white">Отправить</button>
+                            <textarea placeholder="Ваш вопрос.
+Например, описание оборудования или продукции" rows="3" name="message" required></textarea>
                         </div>
                     </div>
                 </form>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-white" id="send_mail_btn">Отправить</button>
+                    </div>
+                </div>
+                <p id="send_mail_result"></p>
             </div>
         </div>
     </section>
     <footer>
         <div class="row align-items-center footer_mb text-center">
             <div class="col-md-auto">
-                <img src="img/logo.png" alt="Logo">
+                <img src="img/logo_group.png" alt="Logo">
             </div>
             <div class="col-md">
-                <div class="row align-items-center footer__links">
+                <div class="row footer__links">
                     <div class="col-sm">
                         <p><a href="#">Пользовательское соглашение</a></p>
                         <p><a href="#">Политика конфиденциальности</a></p>

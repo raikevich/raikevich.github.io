@@ -14,13 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 </head>
 
-<body id="top">
+<body id="top" class="group">
 <div class="container">
     <header>
         <div class="row justify-content-between align-items-center">
             <div class="col col-md-auto header__logo">
-                <a href="/"><img src="img/logo.png" alt="Logo"/></a>
-                <p>Орган по сертификации</p>
+                <a href="/"><img src="img/logo_group.png" alt="Logo"/></a>
+                <p>Эксперт в промышленной безопасности</p>
             </div>
             <div class="col header__menu">
                 <ul class="nav">
@@ -53,19 +53,13 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <div class="client_img">
-                    <img src="img/about_1.jpg" alt="Img">
-                </div>
+                <div class="client_img" style="background: url('img/about_1.jpg') 50% no-repeat; background-size:cover;"></div>
             </div>
             <div class="col-sm-4">
-                <div class="client_img">
-                    <img src="img/about_2.jpg" alt="Img">
-                </div>
+                <div class="client_img" style="background: url('img/about_2.jpg') 50% no-repeat; background-size:cover;"></div>
             </div>
             <div class="col-sm-4">
-                <div class="client_img">
-                    <img src="img/about_3.jpg" alt="Img">
-                </div>
+                <div class="client_img" style="background: url('img/about_3.jpg') 50% no-repeat; background-size:cover;"></div>
             </div>
         </div>
     </section>
@@ -74,35 +68,39 @@
         <p>Оставьте свои данные и мы перезвоним в течение рабочего дня.</p>
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form action="#">
+                <form action="" id="send_mail">
                     <div class="row">
                         <div class="col-md">
-                            <input type="text" placeholder="Имя">
+                            <input type="text" placeholder="Имя" name="name" required>
                         </div>
                         <div class="col-md">
-                            <input type="tel" placeholder="Телефон" pattern="[\+]{0,1}[0-9]{7,30}" title="Допускается ввод знака '+' и цифр">
+                            <input type="tel" name="phone" placeholder="Телефон" pattern="[\+]{0,1}[0-9]{7,30}" title="Допускается ввод знака '+' и цифр" required>
                         </div>
                         <div class="col-md">
-                            <input type="email" placeholder="E-mail">
+                            <input type="email" name="email" placeholder="E-mail" required>
                         </div>
                         <div class="col-12">
-                            <textarea placeholder="Ваш вапрос" rows="3"></textarea>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-white">Отправить</button>
+                            <textarea placeholder="Ваш вопрос.
+Например, описание оборудования или продукции" rows="3" name="message" required></textarea>
                         </div>
                     </div>
                 </form>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-white" id="send_mail_btn">Отправить</button>
+                    </div>
+                </div>
+                <p id="send_mail_result"></p>
             </div>
         </div>
     </section>
     <footer>
         <div class="row align-items-center footer_mb text-center">
             <div class="col-md-auto">
-                <img src="img/logo.png" alt="Logo">
+                <img src="img/logo_group.png" alt="Logo">
             </div>
             <div class="col-md">
-                <div class="row align-items-center footer__links">
+                <div class="row footer__links">
                     <div class="col-sm">
                         <p><a href="#">Пользовательское соглашение</a></p>
                         <p><a href="#">Политика конфиденциальности</a></p>
