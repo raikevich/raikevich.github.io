@@ -143,8 +143,8 @@ $(document).ready(function() {
 
     if ($('.about_tabs').length) {
         function aboutBottom() {
-            var tabA = $('.tabs_yearItem.active');
-            $('.tabs_bottom').css({'left':tabA.offset().left, 'top':tabA.offset().top+tabA.outerHeight(), 'width':tabA.outerWidth()});
+            //var tabA = $('.tabs_yearItem.active');
+            //$('.tabs_bottom').css({'left':tabA.offset().left, 'top':tabA.offset().top+tabA.outerHeight(), 'width':tabA.outerWidth()});
             var tabC = $('.tabs_contentItem.active');
             $('.tabs_content').css({'height':tabC.outerHeight()});
         }

@@ -1257,6 +1257,8 @@ p.sched_year {
     height: 0;
     overflow: hidden;
     transition: all .3s;
+    margin-bottom: 50px;
+    background: #ddd;
 }
 .tabs_bottom {
     height: 3px;
@@ -1310,9 +1312,6 @@ p.sched_year {
     border-left-color: #2b8dbc;
 }
 
-#tabs_2018:after {
-    border-left-color: transparent;
-}
 .tabs_yearItem:before {
     content: "";
     position: absolute;
@@ -1323,6 +1322,15 @@ p.sched_year {
 }
 #tabs_2011:before {
     border-left-color: transparent;
+}
+.tabs_yearItem.active {
+    background: #005792 !important;
+}
+.tabs_yearItem.active:after {
+    border-left-color: #005792 !important;
+}
+#tabs_2018:after {
+    border-left-color: transparent !important;
 }
 /*Табы О нас*/
 @media (max-width: 1199px) {
