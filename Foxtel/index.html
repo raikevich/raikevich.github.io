@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="block first">
+            <div class="help d-flex aic active">
+                <div class="help_image">
+                    <img src="img/help-all.png" alt="Welcome">
+                    <img class="help_anime help_left" src="img/help-left.png" alt="Welcome">
+                    <img class="help_anime help_right" src="img/help-right.png" alt="Welcome">
+                    <img class="help_anime help_top" src="img/help-top.png" alt="Welcome">
+                    <img class="help_table" src="img/help-table.png" alt="Welcome">
+                    <img class="help_anime help_cloud_1" src="img/help-cloud-1.png" alt="Welcome">
+                    <img class="help_anime help_cloud_2" src="img/help-cloud-2.png" alt="Welcome">
+                </div>
+                <div class="help_welcome">
+                    <div class="help_title">
+                        Добро пожаловать, Рустам
+                    </div>
+                    <div class="help_text">
+                        Вы уже добавили сотрудников и настроили приём звонков. Чтобы начать использовать Виртуальную
+                        АТС, завершите настройки: объедините сотрудников в группы по отделам и подключите телефон.
+                    </div>
+                    <div class="help_btn">
+                        <a href="#" class="btn_big">Настроить</a>
+                        <button class="btn_blue on_help">Включить подсказки</button>
+                    </div>
+                </div>
+            </div>
+            <div class="steps d-flex aic jsa">
+                <div class="step_item">
+                    <div class="step_flip">
+                        <div class="step_front step_front_1">
+                            <img src="img/add_worker.png" alt="Worker">
+                        </div>
+                        <div class="step_back">
+                            <div>Для начала работы добавьте первого сотрудника в базу</div>
+                        </div>
+                    </div>
+                    <div class="step_number step_number_ok">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#C4C4C4"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0C3.56364 0 0 3.56364 0 8C0 12.4364 3.56364 16 8 16C12.4364 16 16 12.4364 16 8C16 3.56364 12.4364 0 8 0ZM12.6182 5.49091L6.8 11.5273C6.72727 11.6 6.65455 11.6364 6.54545 11.6364C6.43636 11.6364 6.32727 11.6 6.29091 11.5273L3.45455 8.47273L3.38182 8.4C3.30909 8.32727 3.27273 8.21818 3.27273 8.14545C3.27273 8.07273 3.30909 7.96364 3.38182 7.89091L3.89091 7.38182C4.03636 7.23636 4.25455 7.23636 4.4 7.38182L4.43636 7.41818L6.43636 9.56364C6.50909 9.63636 6.61818 9.63636 6.69091 9.56364L11.5636 4.50909H11.6C11.7455 4.36364 11.9636 4.36364 12.1091 4.50909L12.6182 5.01818C12.7636 5.12727 12.7636 5.34545 12.6182 5.49091Z"/>
+                        </svg>
+                        Шаг 1
+                    </div>
+                    <div class="step_link">
+                        <a href="#" class="btn_blue">Добавьте сотрудника</a>
+                    </div>
+                </div>
+                <div class="step_item">
+                    <div class="step_flip">
+                        <div class="step_front step_front_2">
+                            <img src="img/add_group.png" alt="Worker">
+                        </div>
+                        <div class="step_back">
+                            <div>Объедините сотрудников в группы</div>
+                        </div>
+                    </div>
+                    <div class="step_number">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#C4C4C4"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0C3.56364 0 0 3.56364 0 8C0 12.4364 3.56364 16 8 16C12.4364 16 16 12.4364 16 8C16 3.56364 12.4364 0 8 0ZM12.6182 5.49091L6.8 11.5273C6.72727 11.6 6.65455 11.6364 6.54545 11.6364C6.43636 11.6364 6.32727 11.6 6.29091 11.5273L3.45455 8.47273L3.38182 8.4C3.30909 8.32727 3.27273 8.21818 3.27273 8.14545C3.27273 8.07273 3.30909 7.96364 3.38182 7.89091L3.89091 7.38182C4.03636 7.23636 4.25455 7.23636 4.4 7.38182L4.43636 7.41818L6.43636 9.56364C6.50909 9.63636 6.61818 9.63636 6.69091 9.56364L11.5636 4.50909H11.6C11.7455 4.36364 11.9636 4.36364 12.1091 4.50909L12.6182 5.01818C12.7636 5.12727 12.7636 5.34545 12.6182 5.49091Z"/>
+                        </svg>
+                        Шаг 2
+                    </div>
+                    <div class="step_link">
+                        <a href="#" class="btn_blue">Создайте группы</a>
+                    </div>
+                </div>
+                <div class="step_item">
+                    <div class="step_flip">
+                        <div class="step_front step_front_3">
+                            <img src="img/set_call.png" alt="Worker">
+                        </div>
+                        <div class="step_back">
+                            <div>Настройте звонки</div>
+                        </div>
+                    </div>
+                    <div class="step_number">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#C4C4C4"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0C3.56364 0 0 3.56364 0 8C0 12.4364 3.56364 16 8 16C12.4364 16 16 12.4364 16 8C16 3.56364 12.4364 0 8 0ZM12.6182 5.49091L6.8 11.5273C6.72727 11.6 6.65455 11.6364 6.54545 11.6364C6.43636 11.6364 6.32727 11.6 6.29091 11.5273L3.45455 8.47273L3.38182 8.4C3.30909 8.32727 3.27273 8.21818 3.27273 8.14545C3.27273 8.07273 3.30909 7.96364 3.38182 7.89091L3.89091 7.38182C4.03636 7.23636 4.25455 7.23636 4.4 7.38182L4.43636 7.41818L6.43636 9.56364C6.50909 9.63636 6.61818 9.63636 6.69091 9.56364L11.5636 4.50909H11.6C11.7455 4.36364 11.9636 4.36364 12.1091 4.50909L12.6182 5.01818C12.7636 5.12727 12.7636 5.34545 12.6182 5.49091Z"/>
+                        </svg>
+                        Шаг 3
+                    </div>
+                    <div class="step_link">
+                        <a href="#" class="btn_blue">Настройте звонки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="first_close">Закрыть</div>
+        </div>
+        <div class="block d-flex f-same p-0">
+            <div class="block_item">
+                <p class="info_title"><span>Ваши номера</span></p>
+                <p class="info_subtitle">Номера FoxTel</p>
+                <p class="info_phone">7 (861) 206-22-05</p>
+                <p class="info_small">Схема «По умолчанию»</p>
+                <p class="info_phone">7 (861) 206-22-05</p>
+                <p class="info_small">Схема «По умолчанию»</p>
+                <a href="#" class="btn">Купить</a>
+            </div>
+            <div class="block_item">
+                <p class="info_title"><span>Ваш персонал</span></p>
+                <p class="info_subtitle">Сотрудники <span>2</span></p>
+                <a href="#">Аскерова Александра</a>
+                <p class="info_small">внутренний номер 11</p>
+                <a href="#">Антипова Марина</a>
+                <p class="info_small">внутренний номер 13</p>
+                <p class="info_subtitle">Группы <span>1</span></p>
+                <a href="#">Операторы</a>
+                <p class="info_small">распределение звонков «Случайный»</p>
+            </div>
+            <div class="block_item">
+                <p class="info_title"><span>Подключенные услуги</span></p>
+                <a href="#">Облачное хранилище 50,0 МБ</a>
+                <p class="info_small">Занято 25МБ</p>
+                <a href="#">Комнаты конференций</a>
+                <p class="info_small">На 26 сотрудников</p>
+                <a href="#">Коллтрекинг</a>
+                <p class="info_small">Статический коллтрекинг</p>
+                <a href="#" class="btn">Подключить услуги</a>
+            </div>
+            <div class="block_item">
+                <p class="info_title"><span>Интеграции</span></p>
+                <p class="info_subtitle">У вас пока нет ни одной интеграции.</p>
+                <a href="#" class="btn">Подключить интеграцию</a>
+            </div>
+        </div>
+        <div class="row d-flex f-same">
+            <div class="col">
+                <div class="block call_action d-flex aic">
+                    <img src="img/phone_blue.png" alt="Phone">
+                    <p>Разместите на вашем сайте виджет <a href="#">«Звонок с сайта»</a>, <a href="#">«Обратный
+                        звонок»</a> или <a href="#">«Мультиканальный чат»</a></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="block call_action d-flex aic">
+                    <img src="img/settings.png" alt="Settings">
+                    <p>Используйте все преимущества интеграции FoxTel с вашим бизнес-приложением. <a href="#">Подключить
+                        интеграцию</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="block d-flex f-same p-0">
+            <div class="block_item cloud">
+                <div class="cloud_title d-flex jsb aic">
+                    <p class="info_title">Облачное хранилище <span>200 Мб</span></p>
+                    <a href="#" class="btn">Изменить объем</a>
+                </div>
+                <div class="cloud_graph_wrap">
+                    <div class="cloud_subs cloud_subs_top">
+                        <span data-sub="2">Входящие <span>10 Мб</span></span>
+                        <span data-sub="4">Исходящие <span>30 Мб</span></span>
+                        <span data-sub="6">Свободно <span>119 Мб</span></span>
+                    </div>
+                    <div class="cloud_graph">
+                        <div data-value="9"></div>
+                        <div data-value="10"></div>
+                        <div data-value="18"></div>
+                        <div data-value="30"></div>
+                        <div data-value="14"></div>
+                        <div data-value="119"></div>
+                        <div class="linesub_start_2"></div>
+                        <div class="linesub_start_4"></div>
+                        <div class="linesub_start_6"></div>
+                        <div class="linesub_horiz_2"></div>
+                        <div class="linesub_horiz_4"></div>
+                        <div class="linesub_horiz_6"></div>
+                        <div class="linesub_end_2"></div>
+                        <div class="linesub_end_4"></div>
+                        <div class="linesub_end_6"></div>
+                        <div class="linesub_start_1"></div>
+                        <div class="linesub_start_3"></div>
+                        <div class="linesub_start_5"></div>
+                        <div class="linesub_horiz_1"></div>
+                        <div class="linesub_horiz_3"></div>
+                        <div class="linesub_horiz_5"></div>
+                        <div class="linesub_end_1"></div>
+                        <div class="linesub_end_3"></div>
+                        <div class="linesub_end_5"></div>
+                    </div>
+                    <div class="cloud_subs cloud_subs_bottom">
+                        <span data-sub="1">Звуковые приветствия <span>9 Мб</span></span>
+                        <span data-sub="3">Записи разговоров <span>18 Мб</span></span>
+                        <span data-sub="5">Мелодии вызовов <span>14 Мб</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="block_item news">
+                <p class="info_title"><span>Новости</span></p>
+                <a href="#">FoxTel представил интеграцию телефонии с бизнес-приложениями Microsoft <span
+                        class="news_date">11 Сентября</span></a>
+                <a href="#">FoxTel представила сервис сквозной аналитики <span class="news_date">9 Сентября</span></a>
+                <a href="#">FoxTel представила отраслевое решение для туриндустрии <span
+                        class="news_date">3 Сентября</span></a>
+                <a href="#">FoxTel представила сервис сквозной аналитики <span class="news_date">1 Сентября</span></a>
+            </div>
+        </div>
+        <div class="links d-flex f-same">
+            <div class="links_item">
+                <p class="links_title">Обработка звонков</p>
+                <a href="#">Номера подключенные к АТС</a>
+                <a href="#">Голосовое меню и распределение звонков</a>
+                <a href="#">Настройки ожидания ответа</a>
+                <a href="#">Черный и белый списки</a>
+                <a href="#">Сотрудники и группы</a>
+            </div>
+            <div class="links_item">
+                <p class="links_title">Инструменты</p>
+                <a href="#">Номера подключенные к АТС</a>
+                <a href="#">Голосовое меню и распределение звонков</a>
+                <a href="#">Настройки ожидания ответа</a>
+            </div>
+            <div class="links_item">
+                <p class="links_title">Настройки АТС</p>
+                <a href="#">Номера подключенные к АТС</a>
+                <a href="#">Голосовое меню и распределение звонков</a>
+                <a href="#">Настройки ожидания ответа</a>
+                <a href="#">Черный и белый списки</a>
+                <a href="#">Сотрудники и группы</a>
+                <a href="#">Номера подключенные к АТС</a>
+                <a href="#">Голосовое меню и распределение звонков</a>
+                <a href="#">Настройки ожидания ответа</a>
+                <a href="#">Черный и белый списки</a>
+                <a href="#">Сотрудники и группы</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
