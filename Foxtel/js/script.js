@@ -15,6 +15,59 @@ $(document).ready(function() {
             setTimeout(cloud_graph,500);
         });
     }
+    if($('.numbers_show_phone').length){
+        $('.numbers_show_phone span').on('click',function(){
+            $(this).parent().siblings().show();
+            $(this).remove();
+        });
+    }
+    if($('.show_table_row').length){
+        $('.show_table_row').on('click',function(){
+            $(this).parent().prev().find('.table_row_hide').slideToggle(0);
+            if($(this).text()=='Показать все города')
+                $(this).text('Скрыть города');
+            else $(this).text('Показать все города');
+        });
+    }
+    if($('.manage_on').length){
+        $('.manage_on').on('click',function(){
+            if($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                if ($(this).find('.manage_save').length) {
+                    $(this).find('.manage_save').remove();
+                } else {
+                    $(this).html('<div class="manage_save">Что бы услуга была отключена, нажмите кнопку <span>«Сохранить»</span></div>');
+                }
+            } else {
+                $(this).addClass('active');
+                if ($(this).find('.manage_save').length) {
+                    $(this).find('.manage_save').remove();
+                } else {
+                    $(this).html('<div class="manage_save">Что бы услуга начала действовать, нажмите кнопку <span>«Сохранить»</span></div>');
+                }
+            }
+        });
+    }
+    if($('.manage_trigger').length){
+        $('.manage_trigger_on').on('click',function(){
+            $('.manage_trigger').children().removeClass('active');
+            $(this).addClass('active');
+            $('.manage_open').addClass('active');
+            $('.manage_table .manage_desc').show();
+        });
+        $('.manage_trigger_off').on('click',function(){
+            $('.manage_trigger').children().removeClass('active');
+            $(this).addClass('active');
+            $('.manage_open').removeClass('active');
+            $('.manage_table .manage_desc').hide();
+        });
+    }
+    if($('.manage_open').length){
+        $('.manage_open').on('click',function(){
+            $(this).toggleClass('active');
+            $(this).parent().parent().next('.manage_desc').toggle();
+        });
+    }
 });
 
 $(window).on('load',function() {
