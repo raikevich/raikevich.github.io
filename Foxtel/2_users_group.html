@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children active">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Пользователи</h1>
+        <p class="under_h1">Добавляйте и редактируйте сотрудников, создавайте рабочие группы</p>
+        <div class="block">
+            <div class="block_row block_row_menu">
+                <ul class="list_menu">
+                    <li><a href="#">Описание</a></li>
+                    <li><a href="#">Список абонентов</a></li>
+                    <li class="active"><a href="#">Группы обзвона</a></li>
+                    <li><a href="#">Журнал действий</a></li>
+                    <li><a href="#">Права доступа</a></li>
+                </ul>
+            </div>
+            <div class="block_row block_row_search d-flex aic">
+                <form action="#" class="form_list">
+                    <input type="text" class="list_search" placeholder="Найти">
+                    <button type="submit"></button>
+                </form>
+                <div class="list_result">Всего групп: 1, cотрудников: 2</div>
+                <button class="btn button_add_group">Добавить группу</button>
+            </div>
+            <div class="block_row_usergroup">
+                <div class="usergroup_header">Операторы</div>
+                <div class="usergroup_item">
+                    <div><b>Очередь вызовов:</b><br>По умолчанию (включено, уведомлять)</div>
+                    <div><b>Алгоритм распределения звонков:</b><br>Cлучайный</div>
+                    <div><b>Принимаются звонки с номеров:</b><br>78612062205</div>
+                    <div><b>Сотрудников в группе:</b><br><span class="usergroup_show_table">2 сотрудника</span></div>
+                    <div><b>Номер принимающего сотрудника:</b><br>Только на основные номера сотрудников</div>
+                    <div><b>Используется в схемах:</b><br>По умолчанию</div>
+                </div>
+                <div class="usergroup_hide">
+                    <table class="table usergroup_table">
+                        <thead>
+                        <tr>
+                            <td class="tac">Порядок<br>обзвона</td>
+                            <td class="tac">Роль в<br>группе</td>
+                            <td>Сотрудник<br>Основной номер</td>
+                            <td></td>
+                        </tr>
+                        </thead>
+                        <tbody class="usergroup_drag">
+                        <tr>
+                            <td><img src="img/drag.png" class="drag_table" alt="Drag"></td>
+                            <td><img src="img/user.png" alt="User"></td>
+                            <td class="user_name">Алимбекова Александра<br><a
+                                    href="#">user1@vpbx400148243.mangosip.ru</a></td>
+                            <td>
+                                <button class="remove_from_group">Исключить из группы</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/drag.png" class="drag_table" alt="Drag"></td>
+                            <td><img src="img/user.png" alt="User"></td>
+                            <td class="user_name">Аскерова Анастасия<br><a href="#">user1@vpbx400148243.mangosip.ru</a>
+                            </td>
+                            <td>
+                                <button class="remove_from_group">Исключить из группы</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/drag.png" class="drag_table" alt="Drag"></td>
+                            <td><img src="img/user.png" alt="User"></td>
+                            <td class="user_name">Афанасьева Анатолий<br><a href="#">user1@vpbx400148243.mangosip.ru</a>
+                            </td>
+                            <td>
+                                <button class="remove_from_group">Исключить из группы</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="block_row">
+                        <button class="btn_light">Добавить сотрудников</button>
+                    </div>
+                </div>
+            </div>
+            <div class="block_row">
+                <button class="btn">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="modal modal_add_group">
+    <div class="modal_wrap">
+        <div class="modal_close"></div>
+        <div class="modal_header">Новая группа</div>
+        <ul class="modal_menu">
+            <li class="active">Прием вызовов</li>
+            <li>Очередь вызовов</li>
+        </ul>
+        <div class="modal_tab active">
+
+            <h2>Параметры группы</h2>
+            <label class="label_text">
+                <p>Внутренний номер</p>
+                <input type="text">
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+            <label class="label_text">
+                <p>Примечание</p>
+                <input type="text" placeholder="Укажите дополнительную информацию о группе">
+            </label>
+            <label class="label_select">
+                <p>Принимать звонки</p>
+                <div class="select">
+                    <select>
+                        <option>Только на основные номера сотрудников</option>
+                        <option>На любые номера</option>
+                        <option>Не принимать звонки</option>
+                    </select>
+                </div>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+
+            <h2>Алгоритм распределения звонков в группе
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </h2>
+            <div class="radio_group">
+                <label class="label_radio">
+                    <input type="radio" name="algoritm">
+                    <div class="input_radio"></div>
+                    <p>Последовательный</p>
+                    <div class="modal_help">
+                        <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                        <div class="help_text">Информация</div>
+                    </div>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="algoritm">
+                    <div class="input_radio"></div>
+                    <p>Случайный</p>
+                    <div class="modal_help">
+                        <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                        <div class="help_text">Информация</div>
+                    </div>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="algoritm" disabled>
+                    <div class="input_radio"></div>
+                    <p>Параллельный по приоритету</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="algoritm">
+                    <div class="input_radio"></div>
+                    <p>Одновременно всем</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="algoritm" disabled>
+                    <div class="input_radio"></div>
+                    <p>Равномерный</p>
+                </label>
+            </div>
+            <label class="label_checkbox">
+                <input type="checkbox">
+                <div class="input_checkbox"></div>
+                <p>Переадресовывать звонки на "знакомого" сотрудника</p>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+            <label class="label_checkbox">
+                <input type="checkbox">
+                <div class="input_checkbox"></div>
+                <p>Автоматически перезванивать по пропущенным звонкам</p>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+
+            <h2>Во время ожидания до ответа оператора</h2>
+            <label class="label_select">
+                <p>Играть мелодию</p>
+                <div class="select">
+                    <select>
+                        <option>По умолчанию</option>
+                        <option>Случайную</option>
+                    </select>
+                </div>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+        </div>
+        <div class="modal_tab">
+
+            <h2>Удержание вызовов</h2>
+            <div class="radio_group">
+                <label class="label_radio">
+                    <input type="radio" name="uderzhanie">
+                    <div class="input_radio"></div>
+                    <p>Использовать общие настройки удержания вызовов АТС</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="uderzhanie">
+                    <div class="input_radio"></div>
+                    <p>Использовать специальные настройки удержания вызовов для этой группы</p>
+                </label>
+            </div>
+
+            <h2>Настройки удержания</h2>
+            <label class="label_checkbox">
+                <input type="checkbox">
+                <div class="input_checkbox"></div>
+                <p>Удерживать вызовы (ставить в очередь), если все операторы заняты</p>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+
+            <div class="input_set">
+                <p>Время ожидания</p>
+                <div class="input_set_wrap input_set_wrap_orange">
+                    <input type="text">
+                    <span>Сек</span>
+                </div>
+                <div class="input_param" data-param="30">30 сек</div>
+                <div class="input_param" data-param="600">10 мин</div>
+                <div class="input_param" data-param="0">неограниченно</div>
+            </div>
+            <div class="input_set">
+                <p>Длина очереди</p>
+                <div class="input_set_wrap">
+                    <input type="text">
+                    <span>Чел</span>
+                </div>
+                <div class="input_param" data-param="10">10 чел</div>
+                <div class="input_param" data-param="30">30 чел</div>
+                <div class="input_param" data-param="0">неограниченно</div>
+            </div>
+            <div class="hint">
+                При превышении любого из этих параметров вызов будет классифицирован как неотвеченный группой и
+                направлен дальше по схеме обработки вызовов.
+            </div>
+
+            <h2>Мелодии и звуковые сообщения</h2>
+            <label class="label_select">
+                <p>Постановка в очередь</p>
+                <div class="select">
+                    <select>
+                        <option>По умолчанию</option>
+                        <option>По умолчанию</option>
+                        <option>По умолчанию</option>
+                        <option>По умолчанию</option>
+                    </select>
+                </div>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+            <label class="label_select">
+                <p>Мелодия ожидания</p>
+                <div class="select">
+                    <select>
+                        <option>По умолчанию</option>
+                        <option>По умолчанию</option>
+                        <option>По умолчанию</option>
+                        <option>По умолчанию</option>
+                    </select>
+                </div>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+            <label class="label_select">
+                <p>Превышение ограничений</p>
+                <div class="select">
+                    <select>
+                        <option>Нет</option>
+                        <option>По умолчанию</option>
+                    </select>
+                </div>
+                <div class="modal_help">
+                    <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                    <div class="help_text">Информация</div>
+                </div>
+            </label>
+        </div>
+        <div class="modal_footer">
+            <button class="btn_big">Сохранить</button>
+            <button class="modal_cancel">Отменить</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children active">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Дополнительные настройки</h1>
+        <p class="under_h1">Устанавливайте дополнительные сервисы с масимальной настройкой под себя</p>
+        <div class="block">
+            <div class="block_row block_row_menu">
+                <ul class="list_menu">
+                    <li><a href="#">Голосовая почта</a></li>
+                    <li><a href="#">Факс</a></li>
+                    <li class="active"><a href="#">Облачное хранилище</a></li>
+                    <li><a href="#">Интеграция с мобильной связью</a></li>
+                    <li><a href="#">Отправка SMS</a></li>
+                </ul>
+            </div>
+            <div class="block_row d-flex fw">
+                <div class="block_text block_cloud">
+                    <h2>Объем хранилища 50 МБ</h2>
+                    <p class="cloud_undertitle">Занято 0 МБ, свободно 50 МБ</p>
+                    <p>Дополнительное пространство в облачном хранилище позволит вам надежно хранить записи разговоров, аудиофайлы, сообщения голосовой почты и факсы.</p>
+                    <div class="manage_memory d-flex">
+                        <div class="include_wrap">
+                            <div class="include_number">100 <span>МБ</span></div>
+                            <div class="include_desc">Включено в план</div>
+                        </div>
+                        <div class="slider_memory">
+                            <div class="slider_steps d-flex jsb">
+                                <span>0</span>
+                                <span>20 ГБ</span>
+                                <span>40 ГБ</span>
+                                <span>60 ГБ</span>
+                                <span>80 ГБ</span>
+                                <span>100 ГБ</span>
+                            </div>
+                            <div id="slider_memory" data-min="0" data-max="100" data-value="30"></div>
+                        </div>
+                    </div>
+                    <div><button class="btn">Изменить объем</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
