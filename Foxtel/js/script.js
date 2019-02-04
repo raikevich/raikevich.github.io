@@ -54,14 +54,18 @@ $(document).ready(function () {
         $('.manage_trigger_on').on('click', function () {
             $('.manage_trigger').children().removeClass('active');
             $(this).addClass('active');
-            $('.manage_open').addClass('active');
-            $('.manage_table .manage_desc').show();
+            if ($('.manage_trigger').length) {
+                $('.manage_open').addClass('active');
+                $('.manage_table .manage_desc').show();
+            }
         });
         $('.manage_trigger_off').on('click', function () {
             $('.manage_trigger').children().removeClass('active');
             $(this).addClass('active');
-            $('.manage_open').removeClass('active');
-            $('.manage_table .manage_desc').hide();
+            if ($('.manage_trigger').length) {
+                $('.manage_open').removeClass('active');
+                $('.manage_table .manage_desc').hide();
+            }
         });
     }
     if ($('.manage_open').length) {
@@ -188,20 +192,12 @@ $(document).ready(function () {
             $(this).parents('.block_date').find("[id^='datepicker_to']").val(d_to);
         });
 
-        $("#datepicker_from").datepicker($.datepicker.regional["ru"]);
-        $("#datepicker_to").datepicker($.datepicker.regional["ru"]);
+        $("[id^='datepicker_from']").datepicker($.datepicker.regional["ru"]);
+        $("[id^='datepicker_to']").datepicker($.datepicker.regional["ru"]);
 
         $('.form_clean').on('click', function () {
             $(this).parents('form').find('input').val('');
         });
-    }
-
-    if ($('.report_row').length) {
-        $("#datepicker_from_akt").datepicker($.datepicker.regional["ru"]);
-        $("#datepicker_to_akt").datepicker($.datepicker.regional["ru"]);
-
-        $("#datepicker_from_detail").datepicker($.datepicker.regional["ru"]);
-        $("#datepicker_to_detail").datepicker($.datepicker.regional["ru"]);
     }
 
     if ($('.block_row_report').length) {
@@ -229,11 +225,11 @@ $(document).ready(function () {
         $('.domen_rename').on('click', function () {
             if ($(this).text() == 'Переименовать') {
                 $(this).text('Готово');
-                $(this).siblings('input.domen_title').addClass('rename').removeAttr('disabled').select();
+                $(this).siblings('input.domen_title').addClass('rename').prop('disabled',false).select();
             }
             else if ($(this).text() == 'Готово') {
                 $(this).text('Переименовать');
-                $(this).siblings('input.domen_title').removeClass('rename').attr('disabled', 'disabled');
+                $(this).siblings('input.domen_title').removeClass('rename').prop('disabled',true);
             }
         });
 
@@ -248,7 +244,7 @@ $(document).ready(function () {
         });
     }
 
-    if ($('.block_select').length) {
+    if ($('.block_select').length && !$('.constructor').length) {
         $('.block_select_first').on('click', function () {
             $(this).next('.block_select_hide').slideToggle(200);
         });
@@ -263,10 +259,8 @@ $(document).ready(function () {
             var p = $(this).parents('.block_trigger');
             if (p.hasClass('block_trigger_off')) {
                 p.removeClass('block_trigger_off');
-                p.find('input').removeAttr('disabled');
             } else {
                 p.addClass('block_trigger_off');
-                p.find('input').attr('disabled', 'disabled');
             }
         });
     }
@@ -290,7 +284,96 @@ $(document).ready(function () {
             }
         });
     }
+
+    if ($('.table .label_checkbox').length) {
+        $('.table thead .label_checkbox input').change(function () {
+            if($(this).prop("checked")) {
+                $(this).parents('table').find('tbody .label_checkbox input').prop('checked',true);
+            } else {
+                $(this).parents('table').find('tbody .label_checkbox input').prop('checked',false);
+            }
+        });
+    }
+
+    if ($('.titleRingingLists').length) {
+        $('.label_checkbox input').change(function(){
+            var kolvo = $('tbody .label_checkbox input:checked').length;
+            var s1='';
+            var s2='';
+            if (kolvo%10>=2 && kolvo%10<=4) {
+                s1='о';
+                s2='а';
+            }
+            if (kolvo%10==0 || (kolvo%10>=5 && kolvo%10<=19)) {
+                s1='о';
+                s2='ов';
+            }
+            $('.numCheckContacts').text('Выбран'+s1+' '+kolvo+' контакт'+s2);
+        });
+    }
+    if ($('.textarea').length) {
+        $('.textarea textarea').keyup(function () {
+            var num = $(this).val().length;
+            if (num <= 600) {
+                $(this).next('.textareanum').removeClass('textareanum_red').find('span').text(num);
+            } else {
+                $(this).next('.textareanum').addClass('textareanum_red').find('span').text(num);
+            }
+        });
+    }
+    if ($('.site_name').length) {
+        $('.site_edit').on('click', function () {
+            if ($(this).hasClass('edit')) {
+                $(this).removeClass('edit');
+                $(this).siblings('input').removeClass('rename').prop('disabled',true);
+            }
+            else {
+                $(this).addClass('edit');
+                $(this).siblings('input').addClass('rename').prop('disabled',false).select();
+            }
+        });
+    }
+
+    if ($('.source_name').length) {
+        $('.source_edit').on('click', function () {
+            if ($(this).hasClass('edit')) {
+                $(this).removeClass('edit');
+                $(this).siblings('input').removeClass('rename').prop('disabled',true);
+            }
+            else {
+                $(this).addClass('edit');
+                $(this).siblings('input').addClass('rename').prop('disabled',false).select();
+            }
+        });
+    }
+
+    if($('.resize').length) {
+        $('.resize').each(function (i,e) {
+            $(e).attr('size', $(e).val().length);
+        });
+    }
+
+    if($('.constructor').length) {
+        $('.ul_const').sortable({
+            handle: ".const_move"
+        });
+        $( ".ul_const_double li" ).draggable({
+            connectToSortable: ".ul_const",
+            helper: "clone",
+            revert: "invalid"
+        });
+        $( "ul, li" ).disableSelection();
+    }
 });
+
+function resizeInput(t) {
+    $(t).attr('size', $(t).val().length);
+}
+
+function input_file(t) {
+    var ind = $(t).val().lastIndexOf('\\');
+    $(t).next('.file_input').text($(t).val().substring(ind+1));
+}
 
 function delete_input(t) {
     var par = $(t).parents('label');
@@ -307,8 +390,25 @@ function add_input(t) {
     var pnew = par.clone().insertAfter(par);
     $(t).addClass('delete_input').attr('onclick', 'return delete_input(this)');
     $(pnew).find('p').text('');
+    $(pnew).find('.file_input').text('');
     $(pnew).find('input').val('');
     return false;
+}
+
+function remove_block(t) {
+    $(t).parents('.const_block').addClass('remove');
+    setTimeout(function(){
+        $(t).parents('li').remove();
+    },300);
+}
+
+function block_select_first(t) {
+    $(t).next('.block_select_hide').slideToggle(200);
+}
+
+function block_select_item(t) {
+    $(t).parents('.block_select_hide').slideUp(200);
+    $(t).parents('.block_select').find('.block_select_first span').text($(t).text());
 }
 
 $(window).on('load', function () {
