@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children active">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Настройка уведомлений</h1>
+        <p class="under_h1">Настройте уведомления о состоянии вашего счёта, чтобы не остаться без связи в неподходящий
+            момент</p>
+        <div class="block">
+            <div class="block_row block_row_menu">
+                <ul class="list_menu">
+                    <li><a href="#">Документы</a></li>
+                    <li><a href="#">Расходы на связь</a></li>
+                    <li><a href="#">Платежи</a></li>
+                    <li><a href="#">Пополнить счет</a></li>
+                    <li><a href="#">Автоматический платеж</a></li>
+                    <li class="active"><a href="#">Настройка уведомлений</a></li>
+                </ul>
+            </div>
+            <div class="block_trigger">
+                <div class="block_row">
+                    <div class="manage_on_wrap">
+                        <h2>Заканчиваются средства на счете</h2>
+                        <div class="manage_on active save_none"></div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <label class="label_text label_long">
+                        <p>Уведомление на E-mail</p>
+                        <input type="text" placeholder="rustamakavov@gmail.com">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <div class="checkbox_text">
+                        <p></p>
+                        <label class="label_checkbox">
+                            <input type="checkbox">
+                            <div class="input_checkbox"></div>
+                            <p>Добавить к письму счет на сумму:</p>
+                        </label>
+                        <label class="label_text label_small">
+                            <input type="text" disabled>
+                            <p>руб.</p>
+                        </label>
+                    </div>
+                    <label class="label_text label_long">
+                        <p>SMS-уведомление</p>
+                        <input type="text" placeholder="79604201022">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <label class="label_text label_long">
+                        <p>PUSH-уведомление</p>
+                        <input type="text" placeholder="ФИО сотрудника или внутренний номер">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <div class="checkbox_text">
+                        <label class="label_select label_long">
+                            <p>Минимальный остаток на счете</p>
+                            <div class="select">
+                                <select>
+                                    <option>20 рублей</option>
+                                    <option selected>1000 рублей</option>
+                                    <option>Задать вручную</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label class="label_text label_small">
+                            <input type="text" value="600" disabled>
+                            <p>руб.</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="block_trigger">
+                <div class="block_row">
+                    <div class="manage_on_wrap">
+                        <h2>Блокировка и разблокировка услуг</h2>
+                        <div class="manage_on active save_none"></div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <label class="label_text label_long">
+                        <p>Уведомление на E-mail</p>
+                        <input type="text" placeholder="rustamakavov@gmail.com">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <label class="label_text label_long">
+                        <p>SMS-уведомление</p>
+                        <input type="text" placeholder="79604201022">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <label class="label_text label_long">
+                        <p>PUSH-уведомление</p>
+                        <input type="text" placeholder="ФИО сотрудника или внутренний номер">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="block_trigger block_trigger_off">
+                <div class="block_row">
+                    <div class="manage_on_wrap">
+                        <h2>Зачисление средств на счет</h2>
+                        <div class="manage_on save_none"></div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <label class="label_text label_long">
+                        <p>Уведомление на E-mail</p>
+                        <input type="text" placeholder="rustamakavov@gmail.com">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <label class="label_text label_long">
+                        <p>SMS-уведомление</p>
+                        <input type="text" placeholder="79604201022">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <label class="label_text label_long">
+                        <p>PUSH-уведомление</p>
+                        <input type="text" placeholder="ФИО сотрудника или внутренний номер">
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="block_row">
+                <div class="block_save">
+                    <button class="btn_big">Сохранить</button>
+                    <button class="modal_cancel">Отменить</button>
+                </div>
+            </div>
+            <div class="block_row">
+                <h2>Подписка</h2>
+                <div class="d-flex">
+                    <p class="m-0">Каждую неделю Вы можете бесплатно получать интересные статьи и практические советы по настройке и использованию Виртуальной АТС и других наших продуктов.</p>
+                    <form action="#" class="subscribe">
+                        <input type="text" placeholder="Ваш емейл">
+                        <button class="btn" type="submit">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/date.js"></script>
+<script src="js/datepicker-ru.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

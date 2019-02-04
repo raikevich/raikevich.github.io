@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children active">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Мониторинг</h1>
+        <p class="under_h1">Сервис подключен</p>
+        <div class="block">
+            <div class="block_row block_row_menu">
+                <ul class="list_menu">
+                    <li><a href="#">Описание</a></li>
+                    <li><a href="#">Оценка эффективности работы</a></li>
+                    <li><a href="#">Нагрузка по часам</a></li>
+                    <li><a href="#">Показатели обслуживания</a></li>
+                    <li class="active"><a href="#">Оценка эффективности рекламы</a></li>
+                </ul>
+            </div>
+            <div class="block_row">
+                <p>Позволяет сравнить количество звонков, поступивших на размещенные в рекламных материалах телефоны, чтобы оценить какая рекламная кампания привлекла больше клиентов.</p>
+                <form action="#">
+                    <div class="row monitoring">
+                        <div class="col">
+                            <div class="p_wrap">Группировка</div>
+                            <div class="radio_group">
+                                <label class="label_radio">
+                                    <input type="radio" name="group">
+                                    <div class="input_radio"></div>
+                                    <p>По группам</p>
+                                </label>
+                                <label class="label_radio">
+                                    <input type="radio" name="group">
+                                    <div class="input_radio"></div>
+                                    <p>По сотрудникам</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col block_date">
+                            <div class="report_date">
+                                <div class="select">
+                                    <select class="log_date">
+                                        <option>Выберите период</option>
+                                        <option>Текущий день</option>
+                                        <option>Текущая неделя</option>
+                                        <option>Текущий месяц</option>
+                                        <option>Текущий год</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="report_date">
+                                <div class="log_p">с</div>
+                                <div class="log_datepicker">
+                                    <input type="text" id="datepicker_from" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="report_date">
+                                <div class="log_p">по</div>
+                                <div class="log_datepicker">
+                                    <input type="text" id="datepicker_to" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p_wrap">Длительность вызовов, сек.</div>
+                            <div class="input_interval">
+                                <span>от</span>
+                                <input type="text">
+                                <span>до</span>
+                                <input type="text">
+                            </div>
+                            <label class="label_select">
+                                <div class="select">
+                                    <select>
+                                        <option>По умолчанию</option>
+                                        <option selected>Все входящие звонки</option>
+                                    </select>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <div class="p_wrap">Линия АТС</div>
+                            <div class="checkbox_multiple">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span>Краснодар</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>7 (861) 758-36-99</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span>7 (993) 421-53-02</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Краснодар</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>7 (861) 758-36-99</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>7 (993) 421-53-02</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Краснодар</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>7 (861) 758-36-99</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>7 (993) 421-53-02</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="log_row log_row_findoc d-flex aic">
+                        <button class="btn_big btn_log" type="submit">Показать</button>
+                        <div class="form_clean">Очистить</div>
+                    </div>
+                </form>
+            </div>
+            <div class="block_row">
+                <canvas id="chart" height="400"></canvas>
+                <!-- height = кол-во сотрудников * 60 -->
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+            <script>
+                var ctx = document.getElementById("chart").getContext('2d');
+                Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                var chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["Январь 2019", "Февраль 2019", "Март 2019", "Апрель 2019", "Май 2019", "Июнь 2019", "Июль 2019", "Август 2019", "Сентябрь 2019", "Октябрь 2019", "Ноябрь 2019", "Декабрь 2019"],
+                        datasets: [
+                            {
+                                label: "Краснодар",
+                                data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6, 8, 3],
+                                borderColor: '#1A75BC',
+                                pointBackgroundColor:'#1A75BC',
+                                backgroundColor:'transparent',
+                                pointRadius:4
+                            },
+                            {
+                                label: "7 (993) 421-53-02",
+                                data: [8, 2, 1, 17, 12, 3, 4, 6, 12, 13, 9, 2],
+                                borderColor: '#DE8A2E',
+                                pointBackgroundColor:'#DE8A2E',
+                                backgroundColor:'transparent',
+                                pointStyle:'triangle',
+                                pointRadius:5
+                            },
+                            {
+                                label: "7 (861) 758-36-99",
+                                data: [14, 13, 1, 8, 17, 12, 11, 10, 12, 4, 10, 6],
+                                borderColor: '#88A946',
+                                pointBackgroundColor:'#88A946',
+                                backgroundColor:'transparent',
+                                pointStyle:'rect',
+                                pointRadius:4
+                            },
+                            {
+                                label: "7 (993) 421-53-02",
+                                data: [2, 13, 16, 18, 20, 14, 12, 11, 1, 8, 11, 3],
+                                borderColor: '#FF4C48',
+                                pointBackgroundColor:'#FF4C48',
+                                backgroundColor:'transparent',
+                                pointStyle:'rectRot',
+                                pointRadius:5
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true,
+                                    fontColor:'#bbbcbc',
+                                    fontSize:13
+                                },
+                                gridLines:{
+                                    color: '#e8e9e8',
+                                    zeroLineColor:'#e8e9e8',
+                                    drawBorder:false
+                                },
+                                scaleLabel: {
+                                    display:true,
+                                    labelString:'Количество успешных вызовов'
+                                }
+                            }],
+                            xAxes: [{
+                                barPercentage:0.35,
+                                categoryPercentage:1,
+                                ticks: {
+                                    fontColor:'#bbbcbc',
+                                    fontSize:13
+                                },
+                                gridLines:{
+                                    display: false,
+                                    drawBorder:false
+                                }
+                            }]
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                fontColor: '#8f8f8f',
+                                fontSize: 13,
+                                padding: 50
+
+                            },
+                        },
+                        layout: {
+                            padding: {
+                                left: 0,
+                                right: 0,
+                                top: -47,
+                                bottom: 0
+                            }
+                        },
+                    }
+                });
+            </script>
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>Дата</td>
+                    <td class="tac">Краснодар</td>
+                    <td class="tac">7 (993) 421-53-02</td>
+                    <td class="tac">7 (861) 758-36-99</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Январь 2019</td>
+                    <td class="tac">9</td>
+                    <td class="tac">2</td>
+                    <td class="tac">7</td>
+                </tr>
+                <tr>
+                    <td>Февраль 2019</td>
+                    <td class="tac">9</td>
+                    <td class="tac">2</td>
+                    <td class="tac">7</td>
+                </tr>
+                <tr>
+                    <td>Март 2019</td>
+                    <td class="tac">9</td>
+                    <td class="tac">2</td>
+                    <td class="tac">7</td>
+                </tr>
+                <tr>
+                    <td>Апрель 2019</td>
+                    <td class="tac">9</td>
+                    <td class="tac">2</td>
+                    <td class="tac">7</td>
+                </tr>
+                <tr>
+                    <td>Май 2019</td>
+                    <td class="tac">9</td>
+                    <td class="tac">2</td>
+                    <td class="tac">7</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/date.js"></script>
+<script src="js/datepicker-ru.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

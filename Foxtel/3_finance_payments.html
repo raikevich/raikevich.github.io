@@ -45,7 +45,7 @@
                     <li><a href="#">Конструктор звонков</a></li>
                 </ul>
             </li>
-            <li class="has_children active">
+            <li class="has_children">
                 <a href="#">Пользователи</a>
                 <ul class="sub_menu">
                     <li><a href="#">Список номеров</a></li>
@@ -61,7 +61,7 @@
                     <li><a href="#">Конструктор звонков</a></li>
                 </ul>
             </li>
-            <li class="has_children">
+            <li class="has_children active">
                 <a href="#">Финансовые операции</a>
                 <ul class="sub_menu">
                     <li><a href="#">Список номеров</a></li>
@@ -84,21 +84,22 @@
 </header>
 <main>
     <div class="container">
-        <h1>Пользователи</h1>
-        <p class="under_h1">Добавляйте и редактируйте сотрудников, создавайте рабочие группы</p>
+        <h1>Платежи</h1>
+        <p class="under_h1">Просматривайте отчеты по вашим платежам</p>
         <div class="block">
             <div class="block_row block_row_menu">
                 <ul class="list_menu">
-                    <li><a href="#">Описание</a></li>
-                    <li><a href="#">Список абонентов</a></li>
-                    <li><a href="#">Группы обзвона</a></li>
-                    <li class="active"><a href="#">Журнал действий</a></li>
-                    <li><a href="#">Права доступа</a></li>
+                    <li><a href="#">Документы</a></li>
+                    <li><a href="#">Расходы на связь</a></li>
+                    <li class="active"><a href="#">Платежи</a></li>
+                    <li><a href="#">Пополнить счет</a></li>
+                    <li><a href="#">Автоматический платеж</a></li>
+                    <li><a href="#">Настройка уведомлений</a></li>
                 </ul>
             </div>
             <div class="block_row block_row_search">
                 <form action="#">
-                    <div class="log_row d-flex aic block_date">
+                    <div class="log_row log_row_findoc d-flex aic block_date">
                         <div class="log_p">Период</div>
                         <div class="select">
                             <select class="log_date">
@@ -117,13 +118,7 @@
                         <div class="log_datepicker">
                             <input type="text" id="datepicker_to" autocomplete="off">
                         </div>
-                    </div>
-                    <div class="log_row form_list">
-                        <input type="text" class="list_search" placeholder="Укажите ФИО сотрудника, логин, IP-адрес, раздел или операцию">
-                        <button type="submit"></button>
-                    </div>
-                    <div class="log_row">
-                        <button class="btn_big" type="submit">Показать</button>
+                        <button class="btn_big btn_log" type="submit">Показать</button>
                         <div class="form_clean">Очистить</div>
                     </div>
                 </form>
@@ -131,23 +126,33 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <td>Время</td>
-                    <td>Сотрудник</td>
-                    <td>Логин</td>
-                    <td>IP-адрес</td>
-                    <td>Раздел</td>
-                    <td>Операция</td>
+                    <td>Дата</td>
+                    <td>Платежи</td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td colspan="6" class="tac">Записей не найдено</td>
+                    <td><b>30 ноября 2018 г.</b></td>
+                    <td>8 122 125,00 руб.</td>
+                </tr>
+                <tr>
+                    <td><b>30 ноября 2018 г.</b></td>
+                    <td>8 122 125,00 руб.</td>
+                </tr>
+                <tr>
+                    <td><b>30 ноября 2018 г.</b></td>
+                    <td>8 122 125,00 руб.</td>
+                </tr>
+                <tr>
+                    <td><b>30 ноября 2018 г.</b></td>
+                    <td>8 122 125,00 руб.</td>
+                </tr>
+                <tr>
+                    <td><b>30 ноября 2018 г.</b></td>
+                    <td>8 122 125,00 руб.</td>
                 </tr>
                 </tbody>
             </table>
-            <div class="block_row block_row_log d-flex jsb">
-                <div class="log_show">Показано с <span>0</span> по <span>0</span> из <span>0</span> записей</div>
-                <div class="log_onpage">На страницу: <a href="#" class="active">25</a>, <a href="#">50</a>, <a href="#">100</a></div>
             </div>
         </div>
     </div>

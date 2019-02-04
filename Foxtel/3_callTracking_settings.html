@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children active">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Коллтрекинг</h1>
+        <p class="under_h1">Раздел управления услугой коллтрекинга</p>
+        <div class="block">
+            <div class="block_row block_row_menu">
+                <ul class="list_menu">
+                    <li><a href="#">Описание</a></li>
+                    <li class="active"><a href="#">Настройки коллтрекинга</a></li>
+                    <li><a href="#">Отчеты</a></li>
+                </ul>
+            </div>
+            <div class="block_row block_row_header d-flex aic jsb">
+                <h2>Сайты</h2>
+                <a href="#" class="btn">Добавить сайт</a>
+            </div>
+            <div class="block_row d-flex aic">
+                <div class="site_name">
+                    <input type="text" value="Mysite.ru" class="resize" disabled onkeyup="return resizeInput(this);">
+                    <div class="site_edit"></div>
+                </div>
+                <a href="#" class="btn_big">Подключить</a>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>
+                        <div class="p_wrap">
+                            <span>Источник/канал</span>
+                            <div class="modal_help">
+                                <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                                <div class="help_text">Информация</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="p_wrap">
+                            <span>Номер телефона</span>
+                            <div class="modal_help">
+                                <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                                <div class="help_text">Информация</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="p_wrap">
+                            <span>Отображаемый номер</span>
+                            <div class="modal_help">
+                                <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                                <div class="help_text">Информация</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="p_wrap">
+                            <span>Параметры URL</span>
+                            <div class="modal_help">
+                                <div class="help_icon"><img src="img/help.png" alt="Help"></div>
+                                <div class="help_text">Информация</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="source_name">
+                            <input type="text" value="Введите название" class="resize" disabled onkeyup="return resizeInput(this);">
+                            <div class="source_edit"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="p_wrap">
+                            <span>+7 (861) 206-22-05</span>
+                            <div class="modal_help">
+                                <div class="help_icon"><img src="img/attention.png" alt="Help"></div>
+                                <div class="help_text">Информация</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>(861) 206-22-05</td>
+                    <td class="p_grey">Не указаны</td>
+                    <td>
+                        <div class="manage_on save_none active"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="source_name">
+                            <input type="text" value="Google AdWords" class="resize" disabled onkeyup="return resizeInput(this);">
+                            <div class="source_edit"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#">Выбрать номер</a>
+                    </td>
+                    <td></td>
+                    <td>utm_medium%3Dcpc%26utm_source%3Dgoogle%26</td>
+                    <td>
+                        <div class="manage_on save_none"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="source_name">
+                            <input type="text" value="Введите название" class="resize" disabled onkeyup="return resizeInput(this);">
+                            <div class="source_edit"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="p_wrap">
+                            <span>+7 (861) 206-22-05</span>
+                            <div class="modal_help">
+                                <div class="help_icon"><img src="img/attention.png" alt="Help"></div>
+                                <div class="help_text">Информация</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>(861) 206-22-05</td>
+                    <td class="p_grey">Не указаны</td>
+                    <td>
+                        <div class="manage_on save_none active"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="source_name">
+                            <input type="text" value="Google AdWords" class="resize" disabled onkeyup="return resizeInput(this);">
+                            <div class="source_edit"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#">Выбрать номер</a>
+                    </td>
+                    <td></td>
+                    <td>utm_medium%3Dcpc%26utm_source%3Dgoogle%26</td>
+                    <td>
+                        <div class="manage_on save_none"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="source_name">
+                            <input type="text" value="Введите название" class="resize" disabled onkeyup="return resizeInput(this);">
+                            <div class="source_edit"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="p_wrap">
+                            <span>+7 (861) 206-22-05</span>
+                            <div class="modal_help">
+                                <div class="help_icon"><img src="img/attention.png" alt="Help"></div>
+                                <div class="help_text">Информация</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>(861) 206-22-05</td>
+                    <td class="p_grey">Не указаны</td>
+                    <td>
+                        <div class="manage_on save_none active"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="source_name">
+                            <input type="text" value="Google AdWords" class="resize" disabled onkeyup="return resizeInput(this);">
+                            <div class="source_edit"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#">Выбрать номер</a>
+                    </td>
+                    <td></td>
+                    <td>utm_medium%3Dcpc%26utm_source%3Dgoogle%26</td>
+                    <td>
+                        <div class="manage_on save_none"></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/date.js"></script>
+<script src="js/datepicker-ru.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

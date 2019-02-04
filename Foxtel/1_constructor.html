@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children active">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Конструктор звонков</h1>
+        <p class="under_h1">Вы можете сконструировать звонки под себя</p>
+        <div class="block">
+            <div class="block_row_const">
+                <div class="block_const">
+                    <form action="#" class="form_const">
+                        <label class="label_select">
+                            <p>Номер:</p>
+                            <div class="select">
+                                <select>
+                                    <option>7 (861) 206-22-05</option>
+                                    <option>7 (861) 206-22-05</option>
+                                    <option>7 (861) 206-22-05</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label class="label_select">
+                            <p>Схема:</p>
+                            <div class="select">
+                                <select>
+                                    <option>По умолчанию</option>
+                                    <option>Схема 1</option>
+                                    <option>Схема 2</option>
+                                </select>
+                            </div>
+                        </label>
+                        <div class="submit_wrap const_new">
+                            <p></p>
+                            <a href="#">создать копию,</a>
+                            <a href="#">переименовать,</a>
+                            <a href="#">добавить,</a>
+                            <a href="#">удалить</a>
+                        </div>
+                        <label class="label_textarea">
+                            <p>Описание:</p>
+                            <div class="textarea">
+                                <textarea rows="8"></textarea>
+                            </div>
+                        </label>
+                        <div class="submit_wrap">
+                            <p></p>
+                            <button class="btn" type="submit">Сохранить</button>
+                            <a href="#" class="btn_blue">Отменить</a>
+                        </div>
+                    </form>
+                    <ul class="ul_const_double">
+                        <li>
+                            <div class="const_block const_start">
+                                <div class="const_del" onclick="remove_block(this)"></div>
+                                <div class="const_move"></div>
+                                <div class="const_title">
+                                    <img class="const_img" src="img/start.png" alt="Start">
+                                    <div class="const_block_header">Звуковое приветствие</div>
+                                </div>
+                                <div class="p_wrap">
+                                    <b>Звуковое приветствие:</b>
+                                    <div class="block_select">
+                                        <div class="block_select_first" onclick="block_select_first(this)"><span>Гудок</span></div>
+                                        <div class="block_select_hide">
+                                            <div class="block_select_item" onclick="block_select_item(this)">Гудок</div>
+                                            <div class="block_select_item" onclick="block_select_item(this)">Мелодия</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p_wrap">
+                                    Ожидать окончания:
+                                    <div class="block_select">
+                                        <div class="block_select_first" onclick="block_select_first(this)"><span>Нет</span></div>
+                                        <div class="block_select_hide">
+                                            <div class="block_select_item" onclick="block_select_item(this)">Да</div>
+                                            <div class="block_select_item" onclick="block_select_item(this)">Нет</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="const_block">
+                                <div class="const_del" onclick="remove_block(this)"></div>
+                                <div class="const_move"></div>
+                                <div class="const_title">
+                                    <img class="const_img" src="img/forward.png" alt="Forward">
+                                    <div class="const_block_header">Переадресация</div>
+                                </div>
+                                <div class="p_wrap">
+                                    <b>Переадресация</b> <span class="const_blue">на группу:</span>
+                                    <div class="block_select">
+                                        <div class="block_select_first" onclick="block_select_first(this)"><span>Операторы</span></div>
+                                        <div class="block_select_hide">
+                                            <div class="block_select_item" onclick="block_select_item(this)">Операторы</div>
+                                            <div class="block_select_item" onclick="block_select_item(this)">Операторы</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p_wrap">
+                                    Алгоритм распределения звонков в группе:<br>
+                                    <div class="block_select block_select_grey">
+                                        <div class="block_select_first" onclick="block_select_first(this)"><span>Cлучайный</span></div>
+                                        <div class="block_select_hide">
+                                            <div class="block_select_item" onclick="block_select_item(this)">Cлучайный</div>
+                                            <div class="block_select_item" onclick="block_select_item(this)">Неслучайный</div>
+                                        </div>
+                                    </div>
+                                    <div class="block_select block_select_grey">
+                                        <div class="block_select_first" onclick="block_select_first(this)">
+                                            <span>Только на основные номера сотрудников</span></div>
+                                        <div class="block_select_hide">
+                                            <div class="block_select_item" onclick="block_select_item(this)">Только на основные номера сотрудников
+                                            </div>
+                                            <div class="block_select_item" onclick="block_select_item(this)">На любые номера</div>
+                                        </div>
+                                    </div>
+                                    <div class="block_select block_select_grey">
+                                        <div class="block_select_first" onclick="block_select_first(this)"><span>Мелодия</span></div>
+                                        <div class="block_select_hide">
+                                            <div class="block_select_item" onclick="block_select_item(this)">Гудок</div>
+                                            <div class="block_select_item" onclick="block_select_item(this)">Мелодия</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p_wrap">
+                                    Ожидания: <b>По умолчанию</b>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="const_block">
+                                <div class="const_del" onclick="remove_block(this)"></div>
+                                <div class="const_move"></div>
+                                <div class="const_title">
+                                    <img class="const_img" src="img/forward.png" alt="Forward">
+                                    <div class="const_block_header">Голосовая почта</div>
+                                </div>
+                                <div class="p_wrap">
+                                    <b>Голосовая почта</b> <span class="const_blue">на адрес:</span>
+                                    <div class="block_select">
+                                        <div class="block_select_first" onclick="block_select_first(this)"><span>Первый</span></div>
+                                        <div class="block_select_hide">
+                                            <div class="block_select_item" onclick="block_select_item(this)">Первый</div>
+                                            <div class="block_select_item" onclick="block_select_item(this)">Второй</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p_wrap">
+                                    Ожидания: <b>По умолчанию</b>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block_const">
+                    <div class="constructor">
+                        <h2>Расписание</h2>
+                        <div class="block_select const_header_select">
+                            <div class="block_select_first" onclick="block_select_first(this)"><span>В любое время</span></div>
+                            <div class="block_select_hide">
+                                <div class="block_select_item" onclick="block_select_item(this)">Утро (8:00 - 12:00)</div>
+                                <div class="block_select_item" onclick="block_select_item(this)">День (12:00 - 16:00)</div>
+                                <div class="block_select_item" onclick="block_select_item(this)">Вечер (16:00 - 20:00)</div>
+                            </div>
+                        </div>
+                        <p class="const_before_ul">Сначала</p>
+                        <ul class="ul_const">
+                            <li>
+                                <div class="const_block const_start">
+                                    <div class="const_del" onclick="remove_block(this)"></div>
+                                    <div class="const_move"></div>
+                                    <div class="const_title">
+                                        <img src="img/start.png" alt="Start">
+                                        <div class="const_block_header">Звуковое приветствие</div>
+                                    </div>
+                                    <div class="p_wrap">
+                                        <b>Звуковое приветствие:</b>
+                                        <div class="block_select">
+                                            <div class="block_select_first" onclick="block_select_first(this)"><span>Гудок</span></div>
+                                            <div class="block_select_hide">
+                                                <div class="block_select_item" onclick="block_select_item(this)">Гудок</div>
+                                                <div class="block_select_item" onclick="block_select_item(this)">Мелодия</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p_wrap">
+                                        Ожидать окончания:
+                                        <div class="block_select">
+                                            <div class="block_select_first" onclick="block_select_first(this)"><span>Нет</span></div>
+                                            <div class="block_select_hide">
+                                                <div class="block_select_item" onclick="block_select_item(this)">Да</div>
+                                                <div class="block_select_item" onclick="block_select_item(this)">Нет</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="const_block">
+                                    <div class="const_del" onclick="remove_block(this)"></div>
+                                    <div class="const_move"></div>
+                                    <div class="const_title">
+                                        <img class="const_img" src="img/forward.png" alt="Forward">
+                                        <div class="const_block_header">Переадресация</div>
+                                    </div>
+                                    <div class="p_wrap">
+                                        <b>Переадресация</b> <span class="const_blue">на группу:</span>
+                                        <div class="block_select">
+                                            <div class="block_select_first" onclick="block_select_first(this)"><span>Операторы</span></div>
+                                            <div class="block_select_hide">
+                                                <div class="block_select_item" onclick="block_select_item(this)">Операторы</div>
+                                                <div class="block_select_item" onclick="block_select_item(this)">Операторы</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p_wrap">
+                                        Алгоритм распределения звонков в группе:<br>
+                                        <div class="block_select block_select_grey">
+                                            <div class="block_select_first" onclick="block_select_first(this)"><span>Cлучайный</span></div>
+                                            <div class="block_select_hide">
+                                                <div class="block_select_item" onclick="block_select_item(this)">Cлучайный</div>
+                                                <div class="block_select_item" onclick="block_select_item(this)">Неслучайный</div>
+                                            </div>
+                                        </div>
+                                        <div class="block_select block_select_grey">
+                                            <div class="block_select_first" onclick="block_select_first(this)">
+                                                <span>Только на основные номера сотрудников</span></div>
+                                            <div class="block_select_hide">
+                                                <div class="block_select_item" onclick="block_select_item(this)">Только на основные номера сотрудников
+                                                </div>
+                                                <div class="block_select_item" onclick="block_select_item(this)">На любые номера</div>
+                                            </div>
+                                        </div>
+                                        <div class="block_select block_select_grey">
+                                            <div class="block_select_first" onclick="block_select_first(this)"><span>Мелодия</span></div>
+                                            <div class="block_select_hide">
+                                                <div class="block_select_item" onclick="block_select_item(this)">Гудок</div>
+                                                <div class="block_select_item" onclick="block_select_item(this)">Мелодия</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p_wrap">
+                                        Ожидания: <b>По умолчанию</b>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="const_block const_end">
+                                    <img src="img/end.png" alt="End">
+                                    <b>Отбой</b>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

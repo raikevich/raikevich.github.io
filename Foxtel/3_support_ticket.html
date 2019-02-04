@@ -45,7 +45,7 @@
                     <li><a href="#">Конструктор звонков</a></li>
                 </ul>
             </li>
-            <li class="has_children active">
+            <li class="has_children">
                 <a href="#">Пользователи</a>
                 <ul class="sub_menu">
                     <li><a href="#">Список номеров</a></li>
@@ -78,78 +78,75 @@
                 </ul>
             </li>
             <li><a href="#">Интеграция (CRM)</a></li>
-            <li><a href="#">Поддержка</a></li>
+            <li class="active"><a href="#">Поддержка</a></li>
         </ul>
     </div>
 </header>
 <main>
     <div class="container">
-        <h1>Пользователи</h1>
-        <p class="under_h1">Добавляйте и редактируйте сотрудников, создавайте рабочие группы</p>
+        <h1>Поддержка</h1>
+        <p class="under_h1">Руководства и документация по всему функционалу системы.</p>
         <div class="block">
             <div class="block_row block_row_menu">
                 <ul class="list_menu">
-                    <li><a href="#">Описание</a></li>
-                    <li><a href="#">Список абонентов</a></li>
-                    <li><a href="#">Группы обзвона</a></li>
-                    <li class="active"><a href="#">Журнал действий</a></li>
-                    <li><a href="#">Права доступа</a></li>
+                    <li><a href="#">Руководства и документация</a></li>
+                    <li class="active"><a href="#">Заявка в поддержку</a></li>
+                    <li><a href="#">Наши офисы</a></li>
                 </ul>
             </div>
-            <div class="block_row block_row_search">
-                <form action="#">
-                    <div class="log_row d-flex aic block_date">
-                        <div class="log_p">Период</div>
+            <div class="block_row">
+                <h2>Создать новую заявку</h2>
+                <form action="#" class="ticket">
+                    <label class="label_text">
+                        <p>Тема</p>
+                        <input type="text" placeholder="Кратко опишите причину обращения">
+                    </label>
+                    <label class="label_select">
+                        <p>Категория</p>
                         <div class="select">
-                            <select class="log_date">
-                                <option>Выберите период</option>
-                                <option>Текущий день</option>
-                                <option>Текущая неделя</option>
-                                <option>Текущий месяц</option>
-                                <option>Текущий год</option>
+                            <select>
+                                <option>Выберите категорию заявки</option>
+                                <option>Категория 1</option>
+                                <option>Категория 2</option>
                             </select>
                         </div>
-                        <div class="log_p">с</div>
-                        <div class="log_datepicker">
-                            <input type="text" id="datepicker_from" autocomplete="off">
+                    </label>
+                    <label class="label_textarea">
+                        <p>Текст заявки</p>
+                        <div class="textarea">
+                            <textarea rows="8"></textarea>
+                            <p class="textareanum"><span>0</span> симв. <i>(макс. 600)</i></p>
                         </div>
-                        <div class="log_p">по</div>
-                        <div class="log_datepicker">
-                            <input type="text" id="datepicker_to" autocomplete="off">
+                    </label>
+                    <label class="label_text">
+                        <p>Имя</p>
+                        <input type="text" placeholder="Акавов Рустам Акавович">
+                    </label>
+                    <label class="label_text">
+                        <p>E-mail</p>
+                        <input type="text" placeholder="rustamakavov@gmail.com">
+                    </label>
+                    <label class="label_text">
+                        <p>Телефон</p>
+                        <input type="text" placeholder="7 960 420-10-22">
+                    </label>
+                    <label class="label_file">
+                        <p>Файлы</p>
+                        <div class="file">
+                            <input type="file" onchange="return input_file(this)">
+                            <div class="file_input"></div>
                         </div>
-                    </div>
-                    <div class="log_row form_list">
-                        <input type="text" class="list_search" placeholder="Укажите ФИО сотрудника, логин, IP-адрес, раздел или операцию">
-                        <button type="submit"></button>
-                    </div>
-                    <div class="log_row">
-                        <button class="btn_big" type="submit">Показать</button>
-                        <div class="form_clean">Очистить</div>
+                        <div class="add_input" onclick="return add_input(this)"></div>
+                    </label>
+                    <div class="submit_wrap">
+                        <p></p>
+                        <button class="btn_big" type="submit">Отправить заявку</button>
                     </div>
                 </form>
             </div>
-            <table class="table">
-                <thead>
-                <tr>
-                    <td>Время</td>
-                    <td>Сотрудник</td>
-                    <td>Логин</td>
-                    <td>IP-адрес</td>
-                    <td>Раздел</td>
-                    <td>Операция</td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td colspan="6" class="tac">Записей не найдено</td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="block_row block_row_log d-flex jsb">
-                <div class="log_show">Показано с <span>0</span> по <span>0</span> из <span>0</span> записей</div>
-                <div class="log_onpage">На страницу: <a href="#" class="active">25</a>, <a href="#">50</a>, <a href="#">100</a></div>
-            </div>
         </div>
+    </div>
+    </div>
     </div>
 </main>
 <footer>

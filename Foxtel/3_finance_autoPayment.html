@@ -45,7 +45,7 @@
                     <li><a href="#">Конструктор звонков</a></li>
                 </ul>
             </li>
-            <li class="has_children active">
+            <li class="has_children">
                 <a href="#">Пользователи</a>
                 <ul class="sub_menu">
                     <li><a href="#">Список номеров</a></li>
@@ -61,7 +61,7 @@
                     <li><a href="#">Конструктор звонков</a></li>
                 </ul>
             </li>
-            <li class="has_children">
+            <li class="has_children active">
                 <a href="#">Финансовые операции</a>
                 <ul class="sub_menu">
                     <li><a href="#">Список номеров</a></li>
@@ -84,72 +84,84 @@
 </header>
 <main>
     <div class="container">
-        <h1>Пользователи</h1>
+        <h1>Автоматический платёж</h1>
         <p class="under_h1">Добавляйте и редактируйте сотрудников, создавайте рабочие группы</p>
         <div class="block">
             <div class="block_row block_row_menu">
                 <ul class="list_menu">
-                    <li><a href="#">Описание</a></li>
-                    <li><a href="#">Список абонентов</a></li>
-                    <li><a href="#">Группы обзвона</a></li>
-                    <li class="active"><a href="#">Журнал действий</a></li>
-                    <li><a href="#">Права доступа</a></li>
+                    <li><a href="#">Документы</a></li>
+                    <li><a href="#">Расходы на связь</a></li>
+                    <li><a href="#">Платежи</a></li>
+                    <li><a href="#">Пополнить счет</a></li>
+                    <li class="active"><a href="#">Автоматический платеж</a></li>
+                    <li><a href="#">Настройка уведомлений</a></li>
                 </ul>
+            </div>
+            <div class="block_row">
+                <h2>Доверенная карта</h2>
+                <p>Привязав банковскую карту к лицевому счёту, вы получаете возможность автоматического пополнения
+                    счёта, а также можете совершать быстрые платежи.
+                    <br>
+                    <a href="#" class="btn_blue">Подробная информация</a></p>
+            </div>
+            <div class="block_off">
+                <span>Карта не привязана</span>
             </div>
             <div class="block_row block_row_search">
                 <form action="#">
-                    <div class="log_row d-flex aic block_date">
-                        <div class="log_p">Период</div>
+                    <div class="log_row log_row_findoc d-flex aic">
+                        <label class="label_text label_small">
+                            <p>Лимит списаний:</p>
+                            <input type="text">
+                        </label>
+                        <div class="log_p">руб</div>
                         <div class="select">
-                            <select class="log_date">
-                                <option>Выберите период</option>
-                                <option>Текущий день</option>
-                                <option>Текущая неделя</option>
-                                <option>Текущий месяц</option>
-                                <option>Текущий год</option>
+                            <select>
+                                <option>В день</option>
+                                <option>В неделю</option>
+                                <option>В месяц</option>
+                                <option>В год</option>
                             </select>
                         </div>
-                        <div class="log_p">с</div>
-                        <div class="log_datepicker">
-                            <input type="text" id="datepicker_from" autocomplete="off">
-                        </div>
-                        <div class="log_p">по</div>
-                        <div class="log_datepicker">
-                            <input type="text" id="datepicker_to" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="log_row form_list">
-                        <input type="text" class="list_search" placeholder="Укажите ФИО сотрудника, логин, IP-адрес, раздел или операцию">
-                        <button type="submit"></button>
-                    </div>
-                    <div class="log_row">
-                        <button class="btn_big" type="submit">Показать</button>
-                        <div class="form_clean">Очистить</div>
+                        <button class="btn btn_log" type="submit">Привязать карту</button>
                     </div>
                 </form>
+                <p>&nbsp;</p>
+                <p>Установите лимит списаний с небольшим запасом, чтобы хватило на полтора-два месяца.</p>
             </div>
-            <table class="table">
-                <thead>
-                <tr>
-                    <td>Время</td>
-                    <td>Сотрудник</td>
-                    <td>Логин</td>
-                    <td>IP-адрес</td>
-                    <td>Раздел</td>
-                    <td>Операция</td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td colspan="6" class="tac">Записей не найдено</td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="block_row block_row_log d-flex jsb">
-                <div class="log_show">Показано с <span>0</span> по <span>0</span> из <span>0</span> записей</div>
-                <div class="log_onpage">На страницу: <a href="#" class="active">25</a>, <a href="#">50</a>, <a href="#">100</a></div>
+            <div class="block_trigger block_trigger_off">
+                <div class="block_row">
+                    <h2>Автоматический платёж банковской картой</h2>
+                    <p>При достижении критического баланса, ваш Лицевой счёт будет автоматически пополнен с банковской карты.</p>
+                    <div class="manage_on_wrap">
+                        <div class="manage_on save_none"></div>
+                        <p>Сервис выключен </p>
+                    </div>
+                    <p>&nbsp;</p>
+                    <label class="label_text label_small">
+                        <p>Критический баланс:</p>
+                        <input type="text">
+                    </label>
+                    <label class="label_text label_small">
+                        <p>Сумма платежа:</p>
+                        <input type="text">
+                    </label>
+                    <button class="btn">Сохранить</button>
+                </div>
+                <div class="block_row">
+                    <h2>Быстрый платёж</h2>
+                    <p>Вы можете пополнить счёт на желаемую сумму с привязанной карты в пределах установленного лимита.</p>
+                    <label class="label_text label_small">
+                        <p>Сумма платежа:</p>
+                        <input type="text">
+                    </label>
+                    <button class="btn">Оплатить</button>
+                </div>
             </div>
         </div>
+
+    </div>
+    </div>
     </div>
 </main>
 <footer>

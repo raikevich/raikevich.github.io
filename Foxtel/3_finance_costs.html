@@ -45,7 +45,7 @@
                     <li><a href="#">Конструктор звонков</a></li>
                 </ul>
             </li>
-            <li class="has_children active">
+            <li class="has_children">
                 <a href="#">Пользователи</a>
                 <ul class="sub_menu">
                     <li><a href="#">Список номеров</a></li>
@@ -61,7 +61,7 @@
                     <li><a href="#">Конструктор звонков</a></li>
                 </ul>
             </li>
-            <li class="has_children">
+            <li class="has_children active">
                 <a href="#">Финансовые операции</a>
                 <ul class="sub_menu">
                     <li><a href="#">Список номеров</a></li>
@@ -84,21 +84,22 @@
 </header>
 <main>
     <div class="container">
-        <h1>Пользователи</h1>
+        <h1>Финансы</h1>
         <p class="under_h1">Добавляйте и редактируйте сотрудников, создавайте рабочие группы</p>
         <div class="block">
             <div class="block_row block_row_menu">
                 <ul class="list_menu">
-                    <li><a href="#">Описание</a></li>
-                    <li><a href="#">Список абонентов</a></li>
-                    <li><a href="#">Группы обзвона</a></li>
-                    <li class="active"><a href="#">Журнал действий</a></li>
-                    <li><a href="#">Права доступа</a></li>
+                    <li><a href="#">Документы</a></li>
+                    <li class="active"><a href="#">Расходы на связь</a></li>
+                    <li><a href="#">Платежи</a></li>
+                    <li><a href="#">Пополнить счет</a></li>
+                    <li><a href="#">Автоматический платеж</a></li>
+                    <li><a href="#">Настройка уведомлений</a></li>
                 </ul>
             </div>
             <div class="block_row block_row_search">
                 <form action="#">
-                    <div class="log_row d-flex aic block_date">
+                    <div class="log_row log_row_findoc d-flex aic block_date">
                         <div class="log_p">Период</div>
                         <div class="select">
                             <select class="log_date">
@@ -117,37 +118,87 @@
                         <div class="log_datepicker">
                             <input type="text" id="datepicker_to" autocomplete="off">
                         </div>
-                    </div>
-                    <div class="log_row form_list">
-                        <input type="text" class="list_search" placeholder="Укажите ФИО сотрудника, логин, IP-адрес, раздел или операцию">
-                        <button type="submit"></button>
-                    </div>
-                    <div class="log_row">
-                        <button class="btn_big" type="submit">Показать</button>
+                        <div class="log_p">Номер</div>
+                        <div class="select">
+                            <select class="log_date">
+                                <option>Все</option>
+                                <option>8-800-5555-525</option>
+                                <option>8-800-5555-525</option>
+                            </select>
+                        </div>
+                        <button class="btn_big btn_log" type="submit">Показать</button>
                         <div class="form_clean">Очистить</div>
+                    </div>
+                    <div class="log_row log_row_findoc d-flex aic">
+                        <div class="log_p">Продукт</div>
+                        <div class="select">
+                            <select class="log_date">
+                                <option>Все продукты</option>
+                                <option>Все продукты</option>
+                                <option>Все продукты</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="log_row log_row_findoc">
+                        <div class="block_select">
+                            <div class="block_select_first"><span>Экспортировать данные</span></div>
+                            <div class="block_select_hide">
+                                <div class="block_select_item">Экспорт в XLS</div>
+                                <div class="block_select_item">Экспорт в TXT</div>
+                                <div class="block_select_item">Экспорт в PDF</div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
             <table class="table">
                 <thead>
                 <tr>
-                    <td>Время</td>
-                    <td>Сотрудник</td>
-                    <td>Логин</td>
-                    <td>IP-адрес</td>
-                    <td>Раздел</td>
-                    <td>Операция</td>
+                    <td>Месяц</td>
+                    <td class="tac">Вызовы</td>
+                    <td class="tac">Длительность</td>
+                    <td class="tac">Сумма, руб.</td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td colspan="6" class="tac">Записей не найдено</td>
+                    <td><b>Ноябрь, 2018</b></td>
+                    <td class="tac">3</td>
+                    <td class="tac">00:01:00</td>
+                    <td class="tac">4 550,00</td>
+                </tr>
+                <tr>
+                    <td><b>Ноябрь, 2018</b></td>
+                    <td class="tac">3</td>
+                    <td class="tac">00:01:00</td>
+                    <td class="tac">4 550,00</td>
+                </tr>
+                <tr>
+                    <td><b>Ноябрь, 2018</b></td>
+                    <td class="tac">3</td>
+                    <td class="tac">00:01:00</td>
+                    <td class="tac">4 550,00</td>
+                </tr>
+                <tr>
+                    <td><b>Ноябрь, 2018</b></td>
+                    <td class="tac">3</td>
+                    <td class="tac">00:01:00</td>
+                    <td class="tac">4 550,00</td>
+                </tr>
+                <tr>
+                    <td><b>Ноябрь, 2018</b></td>
+                    <td class="tac">3</td>
+                    <td class="tac">00:01:00</td>
+                    <td class="tac">4 550,00</td>
+                </tr>
+                <tr class="tr_orange">
+                    <td>Всего</td>
+                    <td class="tac">63</td>
+                    <td class="tac">02:36:00</td>
+                    <td class="tac">14 550,00</td>
                 </tr>
                 </tbody>
             </table>
-            <div class="block_row block_row_log d-flex jsb">
-                <div class="log_show">Показано с <span>0</span> по <span>0</span> из <span>0</span> записей</div>
-                <div class="log_onpage">На страницу: <a href="#" class="active">25</a>, <a href="#">50</a>, <a href="#">100</a></div>
             </div>
         </div>
     </div>
