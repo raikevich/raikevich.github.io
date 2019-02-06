@@ -421,7 +421,6 @@ $(window).on('load', function () {
             cloud_graph();
         });
     }
-
 });
 
 function cloud_graph() {

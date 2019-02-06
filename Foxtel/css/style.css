@@ -2583,7 +2583,7 @@ label.label_text.label_long input[type="text"] {
     width: 280px;
 }
 
-.label_remove input, .label_remove .file, .label_remove .add_input {
+.label_remove input, .label_remove .file, .label_remove .add_input, .label_remove .select {
     transition: .3s;
     transform: translateX(100px);
     opacity: 0;
