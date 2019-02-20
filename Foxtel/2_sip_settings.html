@@ -117,23 +117,23 @@
                                         </div>
                                     </h3>
                                     <div class="radio_group">
-                                        <label class="label_radio">
-                                            <input type="radio" name="display_name">
+                                        <label class="label_radio" data-display="Макаров Алексей">
+                                            <input type="radio" name="sip_displayName" checked>
                                             <div class="input_radio"></div>
                                             <p>ФИО сотрудника</p>
                                         </label>
-                                        <label class="label_radio">
-                                            <input type="radio" name="display_name" checked>
+                                        <label class="label_radio" data-display="808874628">
+                                            <input type="radio" name="sip_displayName">
                                             <div class="input_radio"></div>
                                             <p>Внутренний номер</p>
                                         </label>
-                                        <label class="label_radio">
-                                            <input type="radio" name="display_name">
+                                        <label class="label_radio" data-display="alex">
+                                            <input type="radio" name="sip_displayName">
                                             <div class="input_radio"></div>
                                             <p>SIP ID (без домена)</p>
                                         </label>
-                                        <label class="label_radio">
-                                            <input type="radio" name="display_name">
+                                        <label class="label_radio" data-display="8307482">
+                                            <input type="radio" name="sip_displayName">
                                             <div class="input_radio"></div>
                                             <p>Номер компании</p>
                                         </label>
@@ -147,18 +147,18 @@
                                         </div>
                                     </h3>
                                     <div class="radio_group">
-                                        <label class="label_radio">
-                                            <input type="radio" name="identif">
+                                        <label class="label_radio" data-display="1341341">
+                                            <input type="radio" name="sip_displayId">
                                             <div class="input_radio"></div>
                                             <p>Внутренний номер</p>
                                         </label>
-                                        <label class="label_radio">
-                                            <input type="radio" name="identif">
+                                        <label class="label_radio" data-display="alex@best.sip.ru">
+                                            <input type="radio" name="sip_displayId" checked>
                                             <div class="input_radio"></div>
                                             <p>Полный SIP-адрес</p>
                                         </label>
-                                        <label class="label_radio">
-                                            <input type="radio" name="identif" checked>
+                                        <label class="label_radio" data-display="8307482">
+                                            <input type="radio" name="sip_displayId">
                                             <div class="input_radio"></div>
                                             <p>Номер компании</p>
                                         </label>
@@ -171,7 +171,11 @@
                             </div>
                         </div>
                         <div class="c-4">
-                            <img src="img/siptest.png" alt="Siptest">
+                            <div class="sip_test">
+                                <img src="img/siptest.png" alt="Siptest">
+                                <div class="sip_displayName">Макаров Алексей</div>
+                                <div class="sip_displayId">alex@best.sip.ru</div>
+                            </div>
                             <p class="img_desc">На примере экрана SIP-телефона Yealink T28P</p>
                         </div>
                     </div>
