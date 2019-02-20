@@ -91,6 +91,19 @@ $(document).ready(function () {
             }
         });
         $(".ui-slider-horizontal .ui-slider-handle").text($("#slider_memory").slider("value") + ' ГБ');
+
+        $('#slider_memory').on('mousewheel', function(e) {
+            e.preventDefault();
+            var con = $("#slider_memory").slider("values",0);
+            if(e.originalEvent.wheelDelta<0 && con<d_max){
+                $("#slider_memory").slider("value",con+1);
+                $(".ui-slider-horizontal .ui-slider-handle").text(con+1 + ' ГБ');
+            }
+            if(e.originalEvent.wheelDelta>0 && con>d_min){
+                $("#slider_memory").slider("value",con-1);
+                $(".ui-slider-horizontal .ui-slider-handle").text(con-1 + ' ГБ');
+            }
+        });
     }
 
     if ($('.usergroup_table').length) {
@@ -363,6 +376,17 @@ $(document).ready(function () {
             revert: "invalid"
         });
         $( "ul, li" ).disableSelection();
+    }
+
+    if($('.sip_displayName').length) {
+        $('[name="sip_displayName"]').change(function () {
+            var sipName = $('[name="sip_displayName"]:checked').parents('label').attr('data-display');
+            $('.sip_displayName').text(sipName);
+        });
+        $('[name="sip_displayId"]').change(function () {
+            var sipName = $('[name="sip_displayId"]:checked').parents('label').attr('data-display');
+            $('.sip_displayId').text(sipName);
+        });
     }
 });
 

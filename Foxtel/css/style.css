@@ -22,6 +22,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Karma';
+    src: url('../fonts/KarmaSutureRUSbyDaymarius.eot');
+    src: url('../fonts/KarmaSutureRUSbyDaymarius.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/KarmaSutureRUSbyDaymarius.woff2') format('woff2'),
+    url('../fonts/KarmaSutureRUSbyDaymarius.woff') format('woff'),
+    url('../fonts/KarmaSutureRUSbyDaymarius.ttf') format('truetype'),
+    url('../fonts/KarmaSutureRUSbyDaymarius.svg#KarmaSutureRUSbyDaymarius') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
@@ -3448,4 +3460,28 @@ p.p_small {
 .ul_const li {
     width: 100% !important;
     height: auto !important;
+}
+
+.sip_test {
+    position: relative;
+}
+
+.sip_displayName {
+    font-family: "Karma";
+    position: absolute;
+    left: 22px;
+    top: 34px;
+    width: 252px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.sip_displayId {
+    font-family: "Karma";
+    position: absolute;
+    left: 22px;
+    top: 61px;
+    font-size: 18px;
+    width: 252px;
+    text-align: center;
 }
