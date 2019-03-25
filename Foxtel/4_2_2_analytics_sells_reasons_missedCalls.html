@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Аналитика</h1>
+        <p class="under_h1">Мониторинг принятых и пропущеных звонков</p>
+        <div class="block">
+            <div class="block_row block_row_menu">
+                <ul class="list_menu">
+                    <li><a href="#">Описание</a></li>
+                    <li class="active"><a href="#">Продажи</a></li>
+                    <li><a href="#">Обслуживание</a></li>
+                </ul>
+            </div>
+            <div class="block_analytics">
+                <div class="block_analytics_left">
+                    <div class="analyt_menu_wrap">
+                        <div class="analyt_menu_title active"><span>Входящие</span></div>
+                        <ul class="analyt_menu">
+                            <li><a href="#">Пропущенные звонки</a></li>
+                            <li class="active"><a href="#">Причины пропущенных звонков</a></li>
+                            <li><a href="#">Время ожидания</a></li>
+                            <li><a href="#">Длительность разговоров</a></li>
+                            <li><a href="#">Количество перезвонов по пропущенным звонкам</a></li>
+                            <li><a href="#">Насколько быстро сотрудники пытаются перезвонить</a></li>
+                        </ul>
+                    </div>
+                    <div class="analyt_menu_wrap">
+                        <div class="analyt_menu_title"><span>Исходящие</span></div>
+                        <ul class="analyt_menu">
+                            <li><a href="#">Качественные звонки</a></li>
+                            <li><a href="#">Когда лучше звонить</a></li>
+                            <li><a href="#">Исходящий обзвон</a></li>
+                            <li><a href="#">Длительность разговора</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block_analytics_right">
+                    <form action="#" class="analyt_form">
+                        <div class="log_row d-flex aic block_date jsb">
+                            <div class="d-flex">
+                                <label class="radio_switch radio_switch_week">
+                                    <input type="radio" name="analyt_radio">
+                                    <p>Неделя</p>
+                                </label>
+                                <label class="radio_switch radio_switch_month">
+                                    <input type="radio" name="analyt_radio">
+                                    <p>Месяц</p>
+                                </label>
+                            </div>
+                            <div class="analyt_date">
+                                <div class="log_datepicker">
+                                    <input type="text" id="datepicker_from" autocomplete="off">
+                                </div>
+                                <div class="log_p">&mdash;</div>
+                                <div class="log_datepicker">
+                                    <input type="text" id="datepicker_to" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="select">
+                                <select>
+                                    <option>Все номера</option>
+                                    <option>Все номера</option>
+                                    <option>Все номера</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select>
+                                    <option>Все группы</option>
+                                    <option>Все группы</option>
+                                    <option>Все группы</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="block_row">
+                        <div class="analyt_head_label">
+                            <div class="analyt_header">
+                                <h2>Причины пропущенных звонков</h2>
+                            </div>
+                            <label class="label_checkbox">
+                                <input type="checkbox">
+                                <div class="input_checkbox"></div>
+                                <p>Учитывать звонки, пропущенные в голосовом меню</p>
+                            </label>
+                        </div>
+                        <div class="analyt_steps">
+                            <div class="anal_stepImg">
+                                <img src="img/missed_call.png" alt="Call">
+                                <p>Звонок клиента</p>
+                            </div>
+                            <div class="analyt_round"></div>
+                            <div class="analyt_numeral">
+                                <div class="analyt_num">79</div>
+                                <p>Пропущенных вызовов</p>
+                            </div>
+                            <div class="analyt_round"></div>
+                            <div class="anal_stepImg">
+                                <img src="img/missed_answer.png" alt="Answer">
+                                <p>Ответ оператора</p>
+                            </div>
+                        </div>
+                        <div class="where_missed">
+                            <div class="where_missed_title">Где теряются звонки</div>
+                            <div class="where_missed_row">
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+                                <div class="analyt_analog">
+                                    <div class="analog_header analog_where_header">Дозвон на номер</div>
+                                    <div class="analog_where_number">21</div>
+                                    <div class="analog_where_info">10% звонков</div>
+                                    <div class="analog_graph">
+                                        <canvas id="analog_graph1" height="36"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("analog_graph1").getContext('2d');
+                                            Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                            var chart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                                                    datasets: [
+                                                        {
+                                                            data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
+                                                            borderColor: 'rgba(255, 76, 72, 0.7)',
+                                                            backgroundColor:'rgba(255, 155, 153, 0.3)',
+                                                            lineTension:0,
+                                                            pointRadius:0,
+                                                            borderWidth:1
+                                                        }
+                                                    ]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            display:false
+                                                        }],
+                                                        xAxes: [{
+                                                            display:false
+                                                        }]
+                                                    },
+                                                    legend: {
+                                                        display: false
+                                                    }
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="where_missed_detail">
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">8</div>
+                                            <div class="where_missed_detail_right">Звонящий абонент завершил вызов</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">9</div>
+                                            <div class="where_missed_detail_right">Звонящий абонент находится в “черном” списке</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left"></div>
+                                            <div class="where_missed_detail_right">
+                                                <div class="analyt_help">
+                                                    <img src="img/help_modal.png" alt="Help">
+                                                    <p class="btn_blue">Совет</p>
+                                                </div>
+                                                <div class="analyt_help_modal">
+                                                    <p class="help_modal_title">Ожидание в группе</p>
+                                                    <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="analyt_analog">
+                                    <div class="analog_header analog_where_header">Голосовое меню</div>
+                                    <div class="analog_where_number">44</div>
+                                    <div class="analog_where_info">25% звонков</div>
+                                    <div class="analog_graph">
+                                        <canvas id="analog_graph2" height="36"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("analog_graph2").getContext('2d');
+                                            Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                            var chart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                                                    datasets: [
+                                                        {
+                                                            data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
+                                                            borderColor: 'rgba(255, 76, 72, 0.7)',
+                                                            backgroundColor:'rgba(255, 155, 153, 0.3)',
+                                                            lineTension:0,
+                                                            pointRadius:0,
+                                                            borderWidth:1
+                                                        }
+                                                    ]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            display:false
+                                                        }],
+                                                        xAxes: [{
+                                                            display:false
+                                                        }]
+                                                    },
+                                                    legend: {
+                                                        display: false
+                                                    }
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="where_missed_detail">
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">55</div>
+                                            <div class="where_missed_detail_right">Звонящий абонент завершил вызов</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">11</div>
+                                            <div class="where_missed_detail_right">Неверно указан номер вызываемого абонента</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left"></div>
+                                            <div class="where_missed_detail_right">
+                                                <div class="analyt_help">
+                                                    <img src="img/help_modal.png" alt="Help">
+                                                    <p class="btn_blue">Совет</p>
+                                                </div>
+                                                <div class="analyt_help_modal">
+                                                    <p class="help_modal_title">Ожидание в группе</p>
+                                                    <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="analyt_analog">
+                                    <div class="analog_header analog_where_header">Ожидание в группе</div>
+                                    <div class="analog_where_number">388</div>
+                                    <div class="analog_where_info">58% звонков</div>
+                                    <div class="analog_graph">
+                                        <canvas id="analog_graph3" height="36"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("analog_graph3").getContext('2d');
+                                            Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                            var chart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                                                    datasets: [
+                                                        {
+                                                            data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
+                                                            borderColor: 'rgba(255, 76, 72, 0.7)',
+                                                            backgroundColor:'rgba(255, 155, 153, 0.3)',
+                                                            lineTension:0,
+                                                            pointRadius:0,
+                                                            borderWidth:1
+                                                        }
+                                                    ]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            display:false
+                                                        }],
+                                                        xAxes: [{
+                                                            display:false
+                                                        }]
+                                                    },
+                                                    legend: {
+                                                        display: false
+                                                    }
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="where_missed_detail">
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">72</div>
+                                            <div class="where_missed_detail_right">Превышено время ожидания в очереди</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">25</div>
+                                            <div class="where_missed_detail_right">Очередь удержания заполнена</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left"></div>
+                                            <div class="where_missed_detail_right">
+                                                <div class="analyt_help">
+                                                    <img src="img/help_modal.png" alt="Help">
+                                                    <p class="btn_blue">Совет</p>
+                                                </div>
+                                                <div class="analyt_help_modal">
+                                                    <p class="help_modal_title">Ожидание в группе</p>
+                                                    <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="analyt_analog">
+                                    <div class="analog_header analog_where_header">Ожидание сотрудника</div>
+                                    <div class="analog_where_number">71</div>
+                                    <div class="analog_where_info">7% звонков</div>
+                                    <div class="analog_graph">
+                                        <canvas id="analog_graph4" height="36"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("analog_graph4").getContext('2d');
+                                            Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                            var chart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                                                    datasets: [
+                                                        {
+                                                            data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
+                                                            borderColor: 'rgba(255, 76, 72, 0.7)',
+                                                            backgroundColor:'rgba(255, 155, 153, 0.3)',
+                                                            lineTension:0,
+                                                            pointRadius:0,
+                                                            borderWidth:1
+                                                        }
+                                                    ]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            display:false
+                                                        }],
+                                                        xAxes: [{
+                                                            display:false
+                                                        }]
+                                                    },
+                                                    legend: {
+                                                        display: false
+                                                    }
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="where_missed_detail">
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">38</div>
+                                            <div class="where_missed_detail_right">Вызывающий абонент не ответил</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left">9</div>
+                                            <div class="where_missed_detail_right">Звонящий абонент завершил вызов</div>
+                                        </div>
+                                        <div class="where_missed_detail_item">
+                                            <div class="where_missed_detail_left"></div>
+                                            <div class="where_missed_detail_right">
+                                                <div class="analyt_help">
+                                                    <img src="img/help_modal.png" alt="Help">
+                                                    <p class="btn_blue">Совет</p>
+                                                </div>
+                                                <div class="analyt_help_modal">
+                                                    <p class="help_modal_title">Ожидание в группе</p>
+                                                    <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+<div class="modal modal_activate">
+    <div class="modal_wrap">
+        <div class="modal_close"></div>
+        <div class="modal_header">Подключить</div>
+        <div class="modal_tab active">
+            <h2>Выберите отчет для подключения</h2>
+            <label class="label_checkbox">
+                <input type="checkbox">
+                <div class="input_checkbox"></div>
+                <p>Группа отчетов «Продажи» <span>150 руб./ мес.</span></p>
+            </label>
+            <label class="label_checkbox">
+                <input type="checkbox">
+                <div class="input_checkbox"></div>
+                <p>Группа отчетов «Обслуживание» <span>170 руб./ мес.</span></p>
+            </label>
+        </div>
+        <div class="modal_footer">
+            <button class="btn_big">Сохранить</button>
+            <button class="modal_cancel">Отменить</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/date.js"></script>
+<script src="js/datepicker-ru.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foxtel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="container d-flex aic">
+            <div class="header_logo">
+                <img src="img/logo.png" alt="Foxtel">
+            </div>
+            <div class="header_phone">
+                <a href="tel:88005555525">8-800-5555-525</a>
+            </div>
+            <div class="header_info">
+                <ul>
+                    <li>Акавов Рустам Акавович</li>
+                    <li><span>Лицевой счет:</span> 16736991</li>
+                    <li><span>Остаток:</span> 859,64 руб</li>
+                </ul>
+            </div>
+            <div class="header_add">
+                <a href="#" class="btn">Пополнить счет</a>
+            </div>
+            <div class="header_bell">
+                <img src="img/bell.png" alt="Bell">
+                <span class="header_nuberBell">5</span>
+            </div>
+            <div class="header_exit">
+                <a href="#" class="btn_blue">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <ul class="header_menu d-flex jc">
+            <li class="has_children">
+                <a href="#">Операции с номерами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Пользователи</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Настройки ВАТС</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Финансовые операции</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li class="has_children">
+                <a href="#">Управление услугами</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Список номеров</a></li>
+                    <li><a href="#">Управление услугами</a></li>
+                    <li><a href="#">Конструктор звонков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Интеграция (CRM)</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1>Аналитика</h1>
+        <p class="under_h1">Мониторинг принятых и пропущеных звонков</p>
+        <div class="block">
+            <div class="block_row block_row_menu">
+                <ul class="list_menu">
+                    <li><a href="#">Описание</a></li>
+                    <li class="active"><a href="#">Продажи</a></li>
+                    <li><a href="#">Обслуживание</a></li>
+                </ul>
+            </div>
+            <div class="block_analytics">
+                <div class="block_analytics_left">
+                    <div class="analyt_menu_wrap">
+                        <div class="analyt_menu_title"><span>Входящие</span></div>
+                        <ul class="analyt_menu">
+                            <li><a href="#">Пропущенные звонки</a></li>
+                            <li><a href="#">Причины пропущенных звонков</a></li>
+                            <li><a href="#">Время ожидания</a></li>
+                            <li><a href="#">Длительность разговоров</a></li>
+                            <li><a href="#">Количество перезвонов по пропущенным звонкам</a></li>
+                            <li><a href="#">Насколько быстро сотрудники пытаются перезвонить</a></li>
+                        </ul>
+                    </div>
+                    <div class="analyt_menu_wrap">
+                        <div class="analyt_menu_title active"><span>Исходящие</span></div>
+                        <ul class="analyt_menu">
+                            <li><a href="#">Качественные звонки</a></li>
+                            <li><a href="#">Когда лучше звонить</a></li>
+                            <li class="active"><a href="#">Исходящий обзвон</a></li>
+                            <li><a href="#">Длительность разговора</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block_analytics_right">
+                    <form action="#" class="analyt_form">
+                        <div class="log_row d-flex aic block_date jsb">
+                            <div class="d-flex">
+                                <label class="radio_switch radio_switch_week">
+                                    <input type="radio" name="analyt_radio">
+                                    <p>Неделя</p>
+                                </label>
+                                <label class="radio_switch radio_switch_month">
+                                    <input type="radio" name="analyt_radio">
+                                    <p>Месяц</p>
+                                </label>
+                            </div>
+                            <div class="analyt_date">
+                                <div class="log_datepicker">
+                                    <input type="text" id="datepicker_from" autocomplete="off">
+                                </div>
+                                <div class="log_p">&mdash;</div>
+                                <div class="log_datepicker">
+                                    <input type="text" id="datepicker_to" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="select">
+                                <select>
+                                    <option>Все номера</option>
+                                    <option>Все номера</option>
+                                    <option>Все номера</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select>
+                                    <option>Все группы</option>
+                                    <option>Все группы</option>
+                                    <option>Все группы</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="block_row">
+                        <div class="analyt_head_label">
+                            <div class="analyt_header">
+                                <h2>Исходящий обзвон</h2>
+                                <a href="#" class="btn_blue">Для чего этот отчет?</a>
+                            </div>
+                        </div>
+                        <table class="analyt_outgoing_table tac">
+                            <tbody>
+                            <tr class="analog_header">
+                                <td>Ваши сотрудники сделали</td>
+                                <td>Сотрудники звонили на</td>
+                                <td>На один уникальный номер<br>в среднем приходится</td>
+                            </tr>
+                            <tr class="analog_big">
+                                <td>377</td>
+                                <td>62</td>
+                                <td>18,7</td>
+                            </tr>
+                            <tr class="analog_small">
+                                <td>Звонка</td>
+                                <td>Уникальных номера</td>
+                                <td>Звонка</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+                        <div class="row outgoing_row">
+                            <div class="c-4">
+                                <div class="outgoing_blue">
+                                    <div class="outgoing_blue_header outgoing_blue_header_good">
+                                        Молодцы!
+                                    </div>
+                                    <div class="outgoing_blue_body">
+                                        <div class="analog_header">Дозвонились</div>
+                                        <div class="analog_pie_wrap">
+                                            <div class="analog_pie">
+                                                <canvas id="pie1" height="112" width="112"></canvas>
+                                                <div class="analog_pie_number" style="color:#1A75BC">65%</div>
+                                                <script>
+                                                    var ctx = document.getElementById("pie1").getContext('2d');
+                                                    Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                                    var chart = new Chart(ctx, {
+                                                        type: 'pie',
+                                                        data: {
+                                                            datasets: [
+                                                                {
+                                                                    data: [65, 35],
+                                                                    backgroundColor: ["#1A75BC", "#C4C4C4"]
+                                                                }
+                                                            ]
+                                                        },
+                                                        options: {
+                                                            tooltips: {
+                                                                enabled:false
+                                                            }
+                                                        }
+                                                    });
+                                                </script>
+                                            </div>
+                                            <div class="analog_mid">61<br><span>номер</span></div>
+                                        </div>
+                                        <table class="table_out_blue">
+                                            <tbody>
+                                            <tr>
+                                                <td class="out_try">С 1-ой попытки</td>
+                                                <td class="out_linear"><span style="width: 72px;"></span> 16</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="out_try">Со 2-ой попытки</td>
+                                                <td class="out_linear"><span style="width: 52px;"></span> 19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="out_try">С 5-ой и более попытки</td>
+                                                <td class="out_linear"><span style="width: 32px;"></span> 4</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-4">
+                                <div class="outgoing_blue">
+                                    <div class="outgoing_blue_header outgoing_blue_header_so">
+                                        Старались. Не получилось.
+                                    </div>
+                                    <div class="outgoing_blue_body">
+                                        <div class="analog_header">Не дозвонились, хотя перезванивали несколько раз</div>
+                                        <div class="analog_pie_wrap">
+                                            <div class="analog_pie">
+                                                <canvas id="pie2" height="112" width="112"></canvas>
+                                                <div class="analog_pie_number" style="color:#99ABDD">30%</div>
+                                                <script>
+                                                    var ctx = document.getElementById("pie2").getContext('2d');
+                                                    Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                                    var chart = new Chart(ctx, {
+                                                        type: 'pie',
+                                                        data: {
+                                                            datasets: [
+                                                                {
+                                                                    data: [30, 70],
+                                                                    backgroundColor: ["#99ABDD", "#C4C4C4"]
+                                                                }
+                                                            ]
+                                                        },
+                                                        options: {
+                                                            tooltips: {
+                                                                enabled:false
+                                                            }
+                                                        }
+                                                    });
+                                                </script>
+                                            </div>
+                                            <div class="analog_mid">18<br><span>номеров</span></div>
+                                        </div>
+                                        <table class="table_out_blue">
+                                            <tbody>
+                                            <tr>
+                                                <td class="out_try">2 попытки</td>
+                                                <td class="out_linear"><span style="width: 72px;"></span> 16</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="out_try">3 попытки</td>
+                                                <td class="out_linear"><span style="width: 52px;"></span> 19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="out_try">4 попытки</td>
+                                                <td class="out_linear"><span style="width: 32px;"></span> 4</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-4">
+                                <div class="outgoing_blue">
+                                    <div class="outgoing_blue_header outgoing_blue_header_bad">
+                                        Не старались
+                                    </div>
+                                    <div class="outgoing_blue_body">
+                                        <div class="analog_header">Не дозвонились с первой попытки и не перезванивали</div>
+                                        <div class="analog_pie_wrap">
+                                            <div class="analog_pie">
+                                                <canvas id="pie3" height="112" width="112"></canvas>
+                                                <div class="analog_pie_number" style="color:#FF4C48">30%</div>
+                                                <script>
+                                                    var ctx = document.getElementById("pie3").getContext('2d');
+                                                    Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                                    var chart = new Chart(ctx, {
+                                                        type: 'pie',
+                                                        data: {
+                                                            datasets: [
+                                                                {
+                                                                    data: [30, 70],
+                                                                    backgroundColor: ["#FF4C48", "#C4C4C4"]
+                                                                }
+                                                            ]
+                                                        },
+                                                        options: {
+                                                            tooltips: {
+                                                                enabled:false
+                                                            }
+                                                        }
+                                                    });
+                                                </script>
+                                            </div>
+                                            <div class="analog_mid">29<br><span>номеров</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Разговоры сотрудников</h2>
+                        <div class="legend_row">
+                            <div class="legend_item">Дозвонился</div>
+                            <div class="legend_item">Перезванивал, не дозвонился</div>
+                            <div class="legend_item">Не перезванивал</div>
+                        </div>
+                        <table class="analyt_table">
+                            <thead>
+                            <tr>
+                                <td>Сотрудник</td>
+                                <td>Доля номеров, на которые сотрудник не перезванивал</td>
+                                <td>Среднее кол-во попыток дозвониться</td>
+                                <td>Количество уникальных номеров</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Анатолий Чубайс</td>
+                                <td>33%</td>
+                                <td>16</td>
+                                <td class="out_linear"><span style="width: 53px;"></span><span style="width: 30px;"></span><span style="width: 16px;"></span> 16</td>
+                            </tr>
+                            <tr>
+                                <td>Анатолий Чубайс</td>
+                                <td>33%</td>
+                                <td>16</td>
+                                <td class="out_linear"><span style="width: 43px;"></span><span style="width: 20px;"></span><span style="width: 6px;"></span> 16</td>
+                            </tr>
+                            <tr>
+                                <td>Анатолий Чубайс</td>
+                                <td>33%</td>
+                                <td>16</td>
+                                <td class="out_linear"><span style="width: 40px;"></span><span style="width: 19px;"></span><span style="width: 15px;"></span> 16</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+<div class="modal modal_activate">
+    <div class="modal_wrap">
+        <div class="modal_close"></div>
+        <div class="modal_header">Подключить</div>
+        <div class="modal_tab active">
+            <h2>Выберите отчет для подключения</h2>
+            <label class="label_checkbox">
+                <input type="checkbox">
+                <div class="input_checkbox"></div>
+                <p>Группа отчетов «Продажи» <span>150 руб./ мес.</span></p>
+            </label>
+            <label class="label_checkbox">
+                <input type="checkbox">
+                <div class="input_checkbox"></div>
+                <p>Группа отчетов «Обслуживание» <span>170 руб./ мес.</span></p>
+            </label>
+        </div>
+        <div class="modal_footer">
+            <button class="btn_big">Сохранить</button>
+            <button class="modal_cancel">Отменить</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        © 2018 Foxtel
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/date.js"></script>
+<script src="js/datepicker-ru.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
