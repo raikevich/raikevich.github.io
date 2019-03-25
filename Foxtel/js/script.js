@@ -158,6 +158,13 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.modal_activate').length) {
+        $('.button_activate').on('click', function () {
+            $('.modal_activate').addClass('active');
+            $('body').addClass('ohidden').css('margin-right', '0px');
+        });
+    }
+
     if ($('.modal_close').length) {
         $('.modal_close').on('click', function () {
             $(this).parents('.modal').removeClass('active');
@@ -203,6 +210,20 @@ $(document).ready(function () {
             }
             $(this).parents('.block_date').find("[id^='datepicker_from']").val(d_from);
             $(this).parents('.block_date').find("[id^='datepicker_to']").val(d_to);
+        });
+
+        $('.radio_switch').on('click',function(){
+            if ($(this).hasClass('radio_switch_week')) {
+                d_from = Date.today().last().monday().toString('dd.MM.yyyy');
+                d_to = Date.today().next().sunday().toString('dd.MM.yyyy');
+            }
+            if ($(this).hasClass('radio_switch_month')) {
+                d_from = Date.today().moveToFirstDayOfMonth().toString('dd.MM.yyyy');
+                d_to = Date.today().moveToLastDayOfMonth().toString('dd.MM.yyyy');
+            }
+
+            $(this).parents('.analyt_form').find("[id^='datepicker_from']").val(d_from);
+            $(this).parents('.analyt_form').find("[id^='datepicker_to']").val(d_to);
         });
 
         $("[id^='datepicker_from']").datepicker($.datepicker.regional["ru"]);
@@ -386,6 +407,30 @@ $(document).ready(function () {
         $('[name="sip_displayId"]').change(function () {
             var sipName = $('[name="sip_displayId"]:checked').parents('label').attr('data-display');
             $('.sip_displayId').text(sipName);
+        });
+    }
+
+    if ($('.analyt_menu_title').length) {
+        $('.analyt_menu_title').on('click', function () {
+            $(this).toggleClass('active');
+        });
+    }
+
+    if ($('.analyt_help').length) {
+        $('.analyt_help').on('click', function () {
+            var Next = $(this).next('.analyt_help_modal');
+            if(Next.is(':hidden')) {
+                $('.analyt_help_modal').hide();
+                $('.where_missed_detail_right').css('margin-bottom',0);
+                Next.show();
+                $(this).parents('.where_missed_detail_right').css('margin-bottom',Next.outerHeight()+3+'px');
+                var Img = $(this).find('img');
+                Next.css('--help_pos',Img.position().left + (Img.width()/2));
+            } else {
+                $('.analyt_help_modal').hide();
+                $('.where_missed_detail_right').css('margin-bottom',0);
+            }
+
         });
     }
 });
