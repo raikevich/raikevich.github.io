@@ -161,6 +161,7 @@
                                 <h2>Пропущенные звонки</h2>
                                 <a href="#" class="btn_blue">Для чего этот отчет?</a>
                             </div>
+                            <button class="btn btn_analyt_table">Отчет в таблице</button>
                             <label class="label_checkbox">
                                 <input type="checkbox">
                                 <div class="input_checkbox"></div>
@@ -324,26 +325,105 @@
     </div>
     </div>
 </main>
-<div class="modal modal_activate">
+<div class="modal modal_analyt_table">
     <div class="modal_wrap">
         <div class="modal_close"></div>
-        <div class="modal_header">Подключить</div>
-        <div class="modal_tab active">
-            <h2>Выберите отчет для подключения</h2>
-            <label class="label_checkbox">
-                <input type="checkbox">
-                <div class="input_checkbox"></div>
-                <p>Группа отчетов «Продажи» <span>150 руб./ мес.</span></p>
-            </label>
-            <label class="label_checkbox">
-                <input type="checkbox">
-                <div class="input_checkbox"></div>
-                <p>Группа отчетов «Обслуживание» <span>170 руб./ мес.</span></p>
-            </label>
+        <div class="modal_header">Отчет “Пропущенные звонки” (Всего звонков) с 01.01.2019 по 21.01.2019</div>
+        <div class="modal_row modal_analyt_table_row">
+            Всего вызовов <span>72</span> длительностью <span>1:25:45</span>
         </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <td>Время</td>
+                <td>Кто звонил</td>
+                <td>Набранный номер</td>
+                <td>Участники</td>
+                <td>Длительность</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_red">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_blue">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_red">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_blue">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_blue">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_blue">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_blue">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_red">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_blue">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            <tr>
+                <td>19 янв 2019, 10:08:08</td>
+                <td>7 (861) 206-22-05</td>
+                <td>7 (861) 206-22-05</td>
+                <td><span class="analyt_table_blue">Группа продаж Розница</td>
+                <td>25 <span class="analyt_table_grey">c</span></td>
+            </tr>
+            </tbody>
+        </table>
         <div class="modal_footer">
-            <button class="btn_big">Сохранить</button>
-            <button class="modal_cancel">Отменить</button>
+            <div class="block_select">
+                <div class="block_select_first"><span>Экспортировать данные</span></div>
+                <div class="block_select_hide">
+                    <div class="block_select_item">Экспорт в XLS</div>
+                    <div class="block_select_item">Экспорт в TXT</div>
+                    <div class="block_select_item">Экспорт в PDF</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

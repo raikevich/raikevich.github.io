@@ -151,6 +151,13 @@ $(document).ready(function () {
 
     var wp = window.innerWidth - document.documentElement.clientWidth;
 
+    if ($('.modal_analyt_table').length) {
+        $('.btn_analyt_table').on('click', function () {
+            $('.modal_analyt_table').addClass('active');
+            $('body').addClass('ohidden').css('margin-right', '0px');
+        });
+    }
+
     if ($('.modal_add_group').length) {
         $('.button_add_group').on('click', function () {
             $('.modal_add_group').addClass('active');

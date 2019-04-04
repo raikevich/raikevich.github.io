@@ -180,154 +180,157 @@
                             </div>
                         </div>
                         <h2 class="analyt_average_h2">Где ждут дольше всего</h2>
-                        <div class="analyt_average_row">
-                            <div class="analyt_average_item">
-                                <div class="analog_header">Голосовое меню</div>
-                                <div class="average_number">4 <span>сек</span></div>
-                                <div class="analog_graph">
-                                    <canvas id="analog_graph2" height="54"></canvas>
-                                    <script>
-                                        var ctx = document.getElementById("analog_graph2").getContext('2d');
-                                        Chart.defaults.global.defaultFontFamily = 'Open Sans';
-                                        var chart = new Chart(ctx, {
-                                            type: 'line',
-                                            data: {
-                                                labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-                                                datasets: [
-                                                    {
-                                                        data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
-                                                        borderColor: 'rgba(26, 117, 188, 0.61)',
-                                                        backgroundColor:'rgba(0, 143, 254, 0.1)',
-                                                        lineTension:0,
-                                                        pointRadius:0,
-                                                        borderWidth:1
-                                                    }
-                                                ]
-                                            },
-                                            options: {
-                                                scales: {
-                                                    yAxes: [{
-                                                        display:false
-                                                    }],
-                                                    xAxes: [{
-                                                        display:false
-                                                    }]
+                        <div class="analyt_progr_item">
+                            <div class="analyt_progr_item_bracket_rotate"></div>
+                            <div class="analyt_average_row">
+                                <div class="analyt_average_item">
+                                    <div class="analog_header">Голосовое меню</div>
+                                    <div class="average_number">4 <span>сек</span></div>
+                                    <div class="analog_graph">
+                                        <canvas id="analog_graph2" height="54"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("analog_graph2").getContext('2d');
+                                            Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                            var chart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                                                    datasets: [
+                                                        {
+                                                            data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
+                                                            borderColor: 'rgba(26, 117, 188, 0.61)',
+                                                            backgroundColor:'rgba(0, 143, 254, 0.1)',
+                                                            lineTension:0,
+                                                            pointRadius:0,
+                                                            borderWidth:1
+                                                        }
+                                                    ]
                                                 },
-                                                legend: {
-                                                    display: false
-                                                }
-                                            }
-                                        });
-                                    </script>
-                                </div>
-                                <div class="where_missed_detail_right where_missed_detail_right_one">
-                                    <div class="analyt_help jc">
-                                        <img src="img/help_modal.png" alt="Help">
-                                        <p class="btn_blue">Совет</p>
-                                    </div>
-                                    <div class="analyt_help_modal">
-                                        <p class="help_modal_title">Ожидание в группе</p>
-                                        <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="analyt_average_item">
-                                <div class="analog_header">Ожидание в группе</div>
-                                <div class="average_number">1 <span>сек</span></div>
-                                <div class="analog_graph">
-                                    <canvas id="analog_graph1" height="54"></canvas>
-                                    <script>
-                                        var ctx = document.getElementById("analog_graph1").getContext('2d');
-                                        Chart.defaults.global.defaultFontFamily = 'Open Sans';
-                                        var chart = new Chart(ctx, {
-                                            type: 'line',
-                                            data: {
-                                                labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-                                                datasets: [
-                                                    {
-                                                        data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
-                                                        borderColor: 'rgba(26, 117, 188, 0.61)',
-                                                        backgroundColor:'rgba(0, 143, 254, 0.1)',
-                                                        lineTension:0,
-                                                        pointRadius:0,
-                                                        borderWidth:1
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            display:false
+                                                        }],
+                                                        xAxes: [{
+                                                            display:false
+                                                        }]
+                                                    },
+                                                    legend: {
+                                                        display: false
                                                     }
-                                                ]
-                                            },
-                                            options: {
-                                                scales: {
-                                                    yAxes: [{
-                                                        display:false
-                                                    }],
-                                                    xAxes: [{
-                                                        display:false
-                                                    }]
-                                                },
-                                                legend: {
-                                                    display: false
                                                 }
-                                            }
-                                        });
-                                    </script>
-                                </div>
-                                <div class="where_missed_detail_right where_missed_detail_right_one">
-                                    <div class="analyt_help jc">
-                                        <img src="img/help_modal.png" alt="Help">
-                                        <p class="btn_blue">Совет</p>
+                                            });
+                                        </script>
                                     </div>
-                                    <div class="analyt_help_modal">
-                                        <p class="help_modal_title">Ожидание в группе</p>
-                                        <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                    <div class="where_missed_detail_right where_missed_detail_right_one">
+                                        <div class="analyt_help jc">
+                                            <img src="img/help_modal.png" alt="Help">
+                                            <p class="btn_blue">Совет</p>
+                                        </div>
+                                        <div class="analyt_help_modal">
+                                            <p class="help_modal_title">Ожидание в группе</p>
+                                            <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="analyt_average_item">
-                                <div class="analog_header">Ожидание ответа сотрудника</div>
-                                <div class="average_number">3 <span>сек</span></div>
-                                <div class="analog_graph">
-                                    <canvas id="analog_graph3" height="54"></canvas>
-                                    <script>
-                                        var ctx = document.getElementById("analog_graph3").getContext('2d');
-                                        Chart.defaults.global.defaultFontFamily = 'Open Sans';
-                                        var chart = new Chart(ctx, {
-                                            type: 'line',
-                                            data: {
-                                                labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-                                                datasets: [
-                                                    {
-                                                        data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
-                                                        borderColor: 'rgba(26, 117, 188, 0.61)',
-                                                        backgroundColor:'rgba(0, 143, 254, 0.1)',
-                                                        lineTension:0,
-                                                        pointRadius:0,
-                                                        borderWidth:1
+                                <div class="analyt_average_item">
+                                    <div class="analog_header">Ожидание в группе</div>
+                                    <div class="average_number">1 <span>сек</span></div>
+                                    <div class="analog_graph">
+                                        <canvas id="analog_graph1" height="54"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("analog_graph1").getContext('2d');
+                                            Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                            var chart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                                                    datasets: [
+                                                        {
+                                                            data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
+                                                            borderColor: 'rgba(26, 117, 188, 0.61)',
+                                                            backgroundColor:'rgba(0, 143, 254, 0.1)',
+                                                            lineTension:0,
+                                                            pointRadius:0,
+                                                            borderWidth:1
+                                                        }
+                                                    ]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            display:false
+                                                        }],
+                                                        xAxes: [{
+                                                            display:false
+                                                        }]
+                                                    },
+                                                    legend: {
+                                                        display: false
                                                     }
-                                                ]
-                                            },
-                                            options: {
-                                                scales: {
-                                                    yAxes: [{
-                                                        display:false
-                                                    }],
-                                                    xAxes: [{
-                                                        display:false
-                                                    }]
-                                                },
-                                                legend: {
-                                                    display: false
                                                 }
-                                            }
-                                        });
-                                    </script>
-                                </div>
-                                <div class="where_missed_detail_right where_missed_detail_right_one">
-                                    <div class="analyt_help jc">
-                                        <img src="img/help_modal.png" alt="Help">
-                                        <p class="btn_blue">Совет</p>
+                                            });
+                                        </script>
                                     </div>
-                                    <div class="analyt_help_modal">
-                                        <p class="help_modal_title">Ожидание в группе</p>
-                                        <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                    <div class="where_missed_detail_right where_missed_detail_right_one">
+                                        <div class="analyt_help jc">
+                                            <img src="img/help_modal.png" alt="Help">
+                                            <p class="btn_blue">Совет</p>
+                                        </div>
+                                        <div class="analyt_help_modal">
+                                            <p class="help_modal_title">Ожидание в группе</p>
+                                            <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="analyt_average_item">
+                                    <div class="analog_header">Ожидание ответа сотрудника</div>
+                                    <div class="average_number">3 <span>сек</span></div>
+                                    <div class="analog_graph">
+                                        <canvas id="analog_graph3" height="54"></canvas>
+                                        <script>
+                                            var ctx = document.getElementById("analog_graph3").getContext('2d');
+                                            Chart.defaults.global.defaultFontFamily = 'Open Sans';
+                                            var chart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                                                    datasets: [
+                                                        {
+                                                            data: [15, 8, 10, 15, 15, 14, 13, 6, 1, 6],
+                                                            borderColor: 'rgba(26, 117, 188, 0.61)',
+                                                            backgroundColor:'rgba(0, 143, 254, 0.1)',
+                                                            lineTension:0,
+                                                            pointRadius:0,
+                                                            borderWidth:1
+                                                        }
+                                                    ]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            display:false
+                                                        }],
+                                                        xAxes: [{
+                                                            display:false
+                                                        }]
+                                                    },
+                                                    legend: {
+                                                        display: false
+                                                    }
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="where_missed_detail_right where_missed_detail_right_one">
+                                        <div class="analyt_help jc">
+                                            <img src="img/help_modal.png" alt="Help">
+                                            <p class="btn_blue">Совет</p>
+                                        </div>
+                                        <div class="analyt_help_modal">
+                                            <p class="help_modal_title">Ожидание в группе</p>
+                                            <p>Звонок поступил на группу, все операторы были заняты, звонок встал в очередь, провисел там какое-то время. Потом клиент положил трубку, не дождавшись соединения с оператором, или звонок завершился по какому-то таймауту с нашей стороны.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -184,7 +184,8 @@
                                             borderColor: '#FF4C48',
                                             backgroundColor: 'transparent',
                                             lineTension: 0,
-                                            pointRadius: 0,
+                                            pointRadius: 3,
+                                            pointBackgroundColor:'#FF4C48',
                                             borderWidth: 2
                                         }
                                     ]
@@ -209,6 +210,10 @@
                                             gridLines: {
                                                 display: false,
                                                 drawBorder: false
+                                            },
+                                            scaleLabel: {
+                                                display: true,
+                                                labelString: 'Длительность, сек'
                                             }
                                         }]
                                     },
@@ -226,15 +231,16 @@
                                 }
                             });
                         </script>
-                        <p>Длительность, сек</p>
                         <div class="analyt_progr">
                             <div class="analyt_progr_item" style="width: 9%;">
+                                <div class="analyt_progr_item_bracket"></div>
                                 <div class="analyt_prog_wrap">
                                     <div class="analog_where_number">21</div>
                                     <div class="analog_where_info">30% звонков</div>
                                 </div>
                             </div>
                             <div class="analyt_progr_item" style="width: 91%;">
+                                <div class="analyt_progr_item_bracket"></div>
                                 <div class="analyt_prog_wrap">
                                     <div class="analog_where_number">33</div>
                                     <div class="analog_where_info">69% звонков</div>
