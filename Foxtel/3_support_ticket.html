@@ -99,36 +99,47 @@
                 <form action="#" class="ticket">
                     <label class="label_text">
                         <p>Тема</p>
-                        <input type="text" placeholder="Кратко опишите причину обращения">
+                        <input type="text" placeholder="Кратко опишите причину обращения" class="error">
+                        <div class="text_error show">Укажите причину обращения</div>
                     </label>
                     <label class="label_select">
                         <p>Категория</p>
-                        <div class="select">
+                        <!--
+	                        Если поле не заполнено, или заполнено с ошибками, то для input или .select добавлять класс error
+	                        Для textarea добавлять класс error самому textearea и родителю .textarea
+	                        Элементу .text_error добавлять класс show
+	                    -->
+                        <div class="select error">
                             <select>
                                 <option>Выберите категорию заявки</option>
                                 <option>Категория 1</option>
                                 <option>Категория 2</option>
                             </select>
                         </div>
+                        <div class="text_error show">Категория заявки не выбрана</div>
                     </label>
                     <label class="label_textarea">
                         <p>Текст заявки</p>
-                        <div class="textarea">
-                            <textarea rows="8"></textarea>
+                        <div class="textarea error">
+                            <textarea rows="8" class="error"></textarea>
                             <p class="textareanum"><span>0</span> симв. <i>(макс. 600)</i></p>
                         </div>
+                        <div class="text_error show">Текст заявки превышает 600 символов</div>
                     </label>
                     <label class="label_text">
                         <p>Имя</p>
-                        <input type="text" placeholder="Акавов Рустам Акавович">
+                        <input type="text" placeholder="Акавов Рустам Акавович" class="error">
+                        <div class="text_error show">Введите имя</div>
                     </label>
                     <label class="label_text">
                         <p>E-mail</p>
-                        <input type="text" placeholder="rustamakavov@gmail.com">
+                        <input type="text" placeholder="rustamakavov@gmail.com" class="error">
+                        <div class="text_error show">Введите e-mail</div>
                     </label>
                     <label class="label_text">
                         <p>Телефон</p>
-                        <input type="text" placeholder="7 960 420-10-22">
+                        <input type="text" placeholder="7 960 420-10-22" class="error">
+                        <div class="text_error show">Введите корректный номер</div>
                     </label>
                     <label class="label_file">
                         <p>Файлы</p>

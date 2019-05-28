@@ -440,6 +440,13 @@ $(document).ready(function () {
 
         });
     }
+    
+    if ($('.error').length) {
+        $('.error').on('click', function () {
+            $(this).removeClass('error');
+            $(this).next('.text_error').remove();
+        });
+    }
 });
 
 function resizeInput(t) {

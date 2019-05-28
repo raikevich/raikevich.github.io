@@ -61,7 +61,12 @@ input[type="text"] {
     border-radius: 3px;
     padding: 7.5px 10px;
 }
-
+input, textarea, .select {
+	transition: .3s;
+}
+input:focus, textarea:focus, .select:focus {
+	border: 1px solid #4caf50 !important;
+}
 .container {
     width: 1290px;
     margin-right: auto;
@@ -3082,10 +3087,25 @@ input[type="time"].time_to:before {
     font-size: 14px;
 }
 
-p.textareanum_red {
+p.textareanum_red, p.textareanum_red span {
     color: red;
 }
-
+input.error, textarea.error, .select.error {
+	border-color: red;
+}
+.text_error {
+    color: red;
+    font-size: 12px;
+    margin-left: 15px;
+    align-self: center;
+    display: none;
+}
+.text_error.show {
+	display: block;
+}
+.textarea+.text_error{
+	align-self: flex-end;
+}
 .officetext p {
     color: #000;
     font-size: 16px;
@@ -3285,6 +3305,11 @@ p.p_small {
 
 .form_const input, .form_const textarea {
     border: 1px solid #D3D5DC;
+    transition: .3s;
+}
+
+.form_const input:focus, .form_const textarea:focus {
+    border: 1px solid #4caf50;
 }
 
 .constructor {
@@ -3897,7 +3922,7 @@ p.help_modal_title {
 .analog_where_header:after {
     content: '';
     position: absolute;
-    width: 150%;
+    width: 130%;
     height: 1px;
     bottom: calc(100% + 30px);
     background: rgb(226, 226, 226);
