@@ -2385,7 +2385,7 @@ label.label_checkbox.label_checkbox_save {
     border: 1px solid #DE8A2E;
     border-radius: 4px;
     color: #DE8A2E;
-    padding: 6px 35px;
+    padding: 7px 35px;
     position: relative;
     z-index: 5;
     cursor: pointer;
@@ -2687,7 +2687,7 @@ canvas {
     display: flex;
     margin: 0 -5px;
     align-items: center;
-    margin-bottom: 42px;
+    margin-bottom: 39px;
 }
 
 .input_interval span {
@@ -3202,6 +3202,8 @@ p.p_small {
     cursor: pointer;
     border-radius: 0 3px 3px 0;
     border-bottom: 1px solid transparent;
+    background-position: 50%;
+    transition: .3s;
 }
 
 .source_name input {
@@ -4380,7 +4382,9 @@ table.analyt_table tbody td {
 .btn_analyt_table {
     margin-bottom: 23px;
 }
-
+.width_period {
+	width: 61px;
+}
 
 
 
