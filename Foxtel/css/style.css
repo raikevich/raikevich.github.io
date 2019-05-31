@@ -3691,7 +3691,6 @@ p.p_small {
     margin-bottom: 10px;
     position: relative;
 }
-
 .analog_big {
     font-size: 92px;
     line-height: 1.2;
@@ -3808,6 +3807,7 @@ p.p_small {
 
 .where_missed_row .analyt_analog {
     padding: 0 15px;
+    width: 25%;
 }
 
 .analog_where_number {
